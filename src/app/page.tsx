@@ -14,8 +14,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DemoSection />
-      <Features />
       <RoiCalculator />
+      <Features />
       <Founders />
       <FAQ />
       <CtaSection />
