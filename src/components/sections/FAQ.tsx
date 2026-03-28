@@ -1,0 +1,111 @@
+"use client";
+
+import { useState } from "react";
+import { Plus, Minus, ArrowRight } from "lucide-react";
+import SectionWrapper from "@/components/ui/SectionWrapper";
+import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
+import { DEMO_URL } from "@/lib/constants";
+import Link from "next/link";
+
+const faqs = [
+  {
+    question: "How do I get started with Darter?",
+    answer:
+      "After booking a demo, we schedule your implementation sessions. We'll guide you through configuration, integrate with your existing systems, and train your team on the platform.",
+  },
+  {
+    question: "How is this different from an answering service?",
+    answer:
+      "Traditional answering services take messages. Darter actually books appointments, answers patient questions about services and pricing, checks real-time availability, and syncs everything to your clinic software. It handles the full conversation, not just a message.",
+  },
+  {
+    question: "Does this work with my existing phone system?",
+    answer:
+      "Yes. Darter integrates with all major VOIP providers and phone systems. We handle the setup during your implementation session so there's zero disruption to your practice.",
+  },
+  {
+    question: "Can I customize the AI's responses?",
+    answer:
+      "Absolutely. We configure Darter to match your clinic's services, pricing, scheduling rules, and tone of voice. It sounds like your practice, not a generic bot.",
+  },
+  {
+    question: "What happens if the AI can't handle a call?",
+    answer:
+      "Darter is designed to gracefully transfer complex calls to your team. You set the rules for what gets transferred and what gets handled automatically. Every call is logged with a full summary either way.",
+  },
+];
+
+export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  return (
+    <SectionWrapper id="faq">
+      <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+        {/* Left */}
+        <AnimateOnScroll>
+          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-4 text-text-secondary">
+            Everything you need to know about Darter, implementation, and
+            getting started.
+          </p>
+
+          <div className="mt-8 rounded-2xl border border-border bg-surface-elevated p-6">
+            <p className="text-lg font-semibold text-accent-400">
+              Still have questions?
+            </p>
+            <p className="mt-2 text-sm text-text-secondary">
+              Our team is ready to review your practice needs, explore
+              system capabilities, and map your perfect setup.
+            </p>
+            <Link
+              href={DEMO_URL}
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-400 transition-colors hover:text-accent-300"
+            >
+              Schedule a Consultation
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </AnimateOnScroll>
+
+        {/* Right: Accordion */}
+        <AnimateOnScroll delay={0.15}>
+          <div className="space-y-3">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className={`overflow-hidden rounded-xl border transition-colors ${
+                  openIndex === i
+                    ? "border-accent-400/30 bg-surface-elevated"
+                    : "border-border bg-surface"
+                }`}
+              >
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
+                  className="flex w-full items-center justify-between px-6 py-5 text-left"
+                >
+                  <span className="pr-4 font-semibold text-text-primary">
+                    {faq.question}
+                  </span>
+                  {openIndex === i ? (
+                    <Minus className="h-5 w-5 shrink-0 text-accent-400" />
+                  ) : (
+                    <Plus className="h-5 w-5 shrink-0 text-text-muted" />
+                  )}
+                </button>
+                {openIndex === i && (
+                  <div className="px-6 pb-5">
+                    <p className="text-text-secondary leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </AnimateOnScroll>
+      </div>
+    </SectionWrapper>
+  );
+}

@@ -13,8 +13,8 @@ import {
 export const DEMO_URL = "https://cal.com/darter-oi0epj/30min";
 
 export const NAV_LINKS = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Features", href: "#features" },
+  { label: "Platform", href: "#features" },
+  { label: "FAQ", href: "#faq" },
   { label: "About Us", href: "#founders" },
 ];
 

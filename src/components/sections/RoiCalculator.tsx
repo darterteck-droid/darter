@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Minus, Plus } from "lucide-react";
+import { Minus, Plus, Calculator } from "lucide-react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 
@@ -16,21 +16,29 @@ export default function RoiCalculator() {
   return (
     <SectionWrapper id="roi-calculator">
       <AnimateOnScroll>
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center gap-3">
+            <Calculator className="h-8 w-8 text-accent-400" />
+            <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
+              Calculate Your ROI
+            </h2>
+          </div>
+          <p className="mt-4 text-lg text-text-secondary">
+            See how much revenue you&apos;re losing from missed calls and
+            unanswered inquiries
+          </p>
+        </div>
+      </AnimateOnScroll>
+
+      <AnimateOnScroll delay={0.15}>
+        <div className="mx-auto mt-12 max-w-4xl">
           <div className="relative overflow-hidden rounded-2xl border border-border bg-surface-elevated p-6 sm:p-10">
             {/* Decorative glow behind results */}
             <div className="pointer-events-none absolute right-0 top-0 h-full w-1/2">
               <div className="absolute right-10 top-1/2 h-48 w-48 -translate-y-1/2 rounded-full bg-accent-400/5 blur-[80px]" />
             </div>
 
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent-400">
-              Calculate Your ROI
-            </p>
-            <h2 className="mt-2 text-2xl font-bold sm:text-3xl">
-              See What You&apos;re Losing
-            </h2>
-
-            <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:gap-12">
+            <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
               {/* Inputs */}
               <div className="space-y-8">
                 {/* Customer LTV */}
