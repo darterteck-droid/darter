@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Darter | AI Receptionist for Aesthetic Clinics",
   description:
     "Darter is the 24/7 AI receptionist built for aesthetic clinics. Never miss another call. Every appointment booked. Every dollar captured.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "Darter | AI Receptionist for Aesthetic Clinics",
     description:
