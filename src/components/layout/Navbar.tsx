@@ -39,6 +39,12 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="https://app.dartertech.com/login"
+            className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+          >
+            Log In
+          </Link>
           <Button href={DEMO_URL} size="sm">
             Book a Demo
           </Button>
@@ -68,6 +74,13 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="https://app.dartertech.com/login"
+              className="text-lg text-text-secondary transition-colors hover:text-text-primary"
+              onClick={() => setMobileOpen(false)}
+            >
+              Log In
+            </Link>
             <Button href={DEMO_URL} size="md" className="mt-2">
               Book a Demo
             </Button>
