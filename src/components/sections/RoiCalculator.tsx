@@ -24,8 +24,7 @@ export default function RoiCalculator() {
             </h2>
           </div>
           <p className="mt-4 text-lg text-text-secondary">
-            See how much revenue you&apos;re losing from missed calls and
-            unanswered inquiries
+            See how much revenue your clinic loses to missed calls.
           </p>
         </div>
       </AnimateOnScroll>
@@ -136,7 +135,7 @@ export default function RoiCalculator() {
               {/* Results */}
               <div className="relative flex flex-col items-center justify-center rounded-2xl border border-border bg-surface px-6 py-10 text-center">
                 <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">
-                  Estimated Sales Lost / Mo
+                  Estimated Appointments Lost / Month
                 </p>
                 <p className="mt-2 text-5xl font-bold text-text-primary sm:text-6xl">
                   {salesLost % 1 === 0
@@ -147,7 +146,7 @@ export default function RoiCalculator() {
                 <div className="my-6 h-px w-16 bg-accent-400/30" />
 
                 <p className="text-xs font-semibold uppercase tracking-widest text-text-secondary">
-                  Estimated Revenue Lost / Mo
+                  Estimated Revenue Lost / Month
                 </p>
                 <p className="mt-2 bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 bg-clip-text text-5xl font-bold text-transparent sm:text-6xl lg:text-7xl">
                   ${revenueLost.toLocaleString()}

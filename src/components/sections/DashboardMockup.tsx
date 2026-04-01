@@ -14,9 +14,9 @@ export default function DashboardMockup() {
       </div>
 
       {/* Dashboard content */}
-      <div className="grid gap-4 p-6 lg:grid-cols-[1fr_280px]">
+      <div className="grid gap-4 p-4 sm:p-6 lg:grid-cols-[1fr_280px]">
         {/* Stats grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
           <StatBlock label="Total Calls Handled" value="1,248" />
           <StatBlock label="Appointments Booked" value="342" />
           <StatBlock label="Patient ROI" value="12.4x" />
@@ -31,7 +31,7 @@ export default function DashboardMockup() {
           <div className="mt-4 space-y-4">
             <ActivityItem
               text="New Appointment Scheduled"
-              detail="Patient #29481 handled by Darter AI"
+              detail="Patient #29481 booked with Darter"
             />
             <ActivityItem
               text="Follow-Up Call Completed"
@@ -39,7 +39,7 @@ export default function DashboardMockup() {
             />
             <ActivityItem
               text="New Appointment Scheduled"
-              detail="Patient #31056 handled by Darter AI"
+              detail="Patient #31056 booked with Darter"
             />
           </div>
         </div>
@@ -58,10 +58,10 @@ function StatBlock({
   highlight?: boolean;
 }) {
   return (
-    <div className="rounded-xl border border-border bg-surface p-5">
-      <p className="text-xs text-text-muted">{label}</p>
+    <div className="rounded-xl border border-border bg-surface p-3 sm:p-5">
+      <p className="text-[10px] sm:text-xs text-text-muted">{label}</p>
       <p
-        className={`mt-2 text-2xl font-bold sm:text-3xl ${
+        className={`mt-1 sm:mt-2 text-xl font-bold sm:text-3xl ${
           highlight ? "text-accent-400" : "text-text-primary"
         }`}
       >

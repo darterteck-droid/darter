@@ -11,27 +11,27 @@ const faqs = [
   {
     question: "How do I get started with Darter?",
     answer:
-      "After booking a demo, we schedule your implementation sessions. We'll guide you through configuration, integrate with your existing systems, and train your team on the platform.",
+      "Once you book a demo, we'll walk you through the next steps, configure your system, connect the tools you already use, and help your team get up and running smoothly.",
   },
   {
-    question: "How is this different from an answering service?",
+    question: "How is Darter different from a traditional answering service?",
     answer:
-      "Traditional answering services take messages. Darter actually books appointments, answers patient questions about services and pricing, checks real-time availability, and syncs everything to your clinic software. It handles the full conversation, not just a message.",
+      "Traditional answering services usually take messages. Darter does more. It can answer questions, book appointments, route calls intelligently, and create a more consistent patient experience without adding work to your team.",
   },
   {
-    question: "Does this work with my existing phone system?",
+    question: "Does Darter work with my current phone system?",
     answer:
-      "Yes. Darter integrates with all major VOIP providers and phone systems. We handle the setup during your implementation session so there's zero disruption to your practice.",
+      "In most cases, yes. We'll review your current setup during the demo and show you the best way to integrate Darter into your existing workflow.",
   },
   {
-    question: "Can I customize the AI's responses?",
+    question: "Can I customize how Darter responds?",
     answer:
-      "Absolutely. We configure Darter to match your clinic's services, pricing, scheduling rules, and tone of voice. It sounds like your practice, not a generic bot.",
+      "Yes. Darter can be tailored to your clinic's services, tone, policies, and scheduling preferences so the experience feels aligned with your brand.",
   },
   {
-    question: "What happens if the AI can't handle a call?",
+    question: "What happens if Darter cannot handle a call?",
     answer:
-      "Darter is designed to gracefully transfer complex calls to your team. You set the rules for what gets transferred and what gets handled automatically. Every call is logged with a full summary either way.",
+      "When a call needs human attention, Darter can route it according to your preferred workflow so the right person takes over at the right time.",
   },
 ];
 
@@ -56,8 +56,8 @@ export default function FAQ() {
               Still have questions?
             </p>
             <p className="mt-2 text-sm text-text-secondary">
-              Our team is ready to review your practice needs, explore
-              system capabilities, and map your perfect setup.
+              We&apos;ll walk through your workflow and show you how Darter
+              fits into your clinic.
             </p>
             <Link
               href={DEMO_URL}

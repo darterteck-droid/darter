@@ -9,11 +9,11 @@ export default function Features() {
       <AnimateOnScroll>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Comprehensive Voice AI for Aesthetic Clinics
+            Everything Your Front Desk Needs, Even When Your Team Is Busy
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
-            Powerful automation tools tailored to your practice needs.
-            Darter gives you the software, training, and support to scale.
+            Built for aesthetic clinics that want to grow without dropping
+            calls or leads.
           </p>
         </div>
       </AnimateOnScroll>

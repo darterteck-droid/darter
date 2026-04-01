@@ -29,15 +29,13 @@ export default function CtaSection() {
             Get Started
           </p>
           <h2 className="mt-4 text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Ready to Stop
-            <br />
+            Ready to Stop Losing Calls and Start{" "}
             <span className="bg-gradient-to-r from-accent-200 via-accent-400 to-accent-600 bg-clip-text text-transparent">
-              Losing Calls?
+              Capturing More Revenue?
             </span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-text-secondary">
-            Join the aesthetic clinics already using Darter to capture every
-            opportunity. Setup takes less than a day.
+            Setup is fast. The impact is immediate.
           </p>
           <div className="mt-10">
             <Button href={DEMO_URL} size="lg">
