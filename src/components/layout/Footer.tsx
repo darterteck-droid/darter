@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+function ComplianceBadge({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <div className="flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-4 py-2 text-text-muted">
+      {icon}
+      <span className="text-xs font-medium tracking-wide">{label}</span>
+    </div>
+  );
+}
+
 const footerLinks = {
   Product: [
     { label: "How It Works", href: "#how-it-works" },
@@ -56,10 +65,54 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-border pt-8 text-center">
-          <p className="text-sm text-text-muted">
-            &copy; {new Date().getFullYear()} Darter. All rights reserved.
-          </p>
+        <div className="mt-12 border-t border-border pt-8">
+          <div className="flex flex-col items-center gap-6">
+            {/* Compliance badges */}
+            <div className="flex items-center gap-4">
+              <ComplianceBadge
+                icon={
+                  <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+                    <path
+                      d="M12 2L3 7v6c0 5.25 3.83 10.15 9 11.25C17.17 23.15 21 18.25 21 13V7l-9-5z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M9 12l2 2 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                }
+                label="HIPAA Compliant"
+              />
+              <ComplianceBadge
+                icon={
+                  <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+                    <path
+                      d="M12 2L3 7v6c0 5.25 3.83 10.15 9 11.25C17.17 23.15 21 18.25 21 13V7l-9-5z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M12 8v4m0 3h.01"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                }
+                label="SOC 2 Certified"
+              />
+            </div>
+            <p className="text-sm text-text-muted">
+              &copy; {new Date().getFullYear()} Darter. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
