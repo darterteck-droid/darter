@@ -7,10 +7,10 @@ import { DEMO_URL } from "@/lib/constants";
 const tiers = [
   {
     name: "Growth",
-    price: "$349",
-    unit: "/location/month",
-    minutes: "2,500 minutes included",
-    overage: "$0.15/min overage",
+    price: "$597",
+    unit: "/month",
+    minutes: "1,500 minutes included",
+    overage: "$0.25/min overage",
     features: [
       "Voice AI receptionist",
       "Missed-call capture",
@@ -23,10 +23,10 @@ const tiers = [
   },
   {
     name: "Scale",
-    price: "$599",
-    unit: "/location/month",
-    minutes: "5,000 minutes included",
-    overage: "$0.12/min overage",
+    price: "$1,097",
+    unit: "/month",
+    minutes: "4,000 minutes included",
+    overage: "$0.22/min overage",
     features: [
       "Everything in Growth, plus:",
       "Premium voice AI receptionist",
