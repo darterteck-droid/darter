@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -13,7 +14,16 @@ export default function TermsOfServicePage() {
     <main>
       <Navbar />
       <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-text-primary">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-text-primary"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 12L6 8l4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Home
+        </Link>
+        <h1 className="mt-4 text-4xl font-bold text-text-primary">
           Darter Terms of Service
         </h1>
         <p className="mt-2 text-sm text-text-muted">
