@@ -112,8 +112,8 @@ export default function Footer() {
             The AI receptionist for aesthetic clinics.
           </p>
 
-          {/* Link columns */}
-          <div className="mt-8 flex gap-16">
+          {/* Link columns + compliance badges */}
+          <div className="mt-8 flex flex-wrap items-start justify-center gap-12 sm:gap-16">
             {Object.entries(footerLinks).map(([heading, links]) => (
               <div key={heading}>
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
@@ -133,16 +133,14 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+            <ComplianceBadges />
           </div>
         </div>
 
         <div className="mt-12 border-t border-border pt-8">
-          <div className="flex flex-col items-center gap-8">
-            <ComplianceBadges />
-            <p className="text-sm text-text-muted">
-              &copy; {new Date().getFullYear()} Darter. All rights reserved.
-            </p>
-          </div>
+          <p className="text-center text-sm text-text-muted">
+            &copy; {new Date().getFullYear()} Darter. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
