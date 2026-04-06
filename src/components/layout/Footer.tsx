@@ -114,6 +114,7 @@ export default function Footer() {
 
           {/* Link columns + compliance badges */}
           <div className="mt-8 flex flex-wrap items-start justify-center gap-12 sm:gap-16">
+            <ComplianceBadges />
             {Object.entries(footerLinks).map(([heading, links]) => (
               <div key={heading}>
                 <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
@@ -133,7 +134,6 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
-            <ComplianceBadges />
           </div>
         </div>
 
