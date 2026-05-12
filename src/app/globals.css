@@ -1,24 +1,26 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0A0A0A;
-  --color-surface: #141414;
-  --color-surface-elevated: #1C1C1C;
+  /* Light, Apple-product-page palette — cream background, warm tan as accent only. */
+  --color-background: #FAF8F5;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-sunken: #F2EEE8;
 
-  --color-border: #2A2A2A;
-  --color-border-subtle: #1F1F1F;
+  --color-border: #E6E0D9;
+  --color-border-subtle: #EFEAE3;
 
   --color-accent-50: #FDF5F0;
   --color-accent-100: #F2DDD2;
   --color-accent-200: #DEC0B0;
   --color-accent-300: #D4AD9A;
   --color-accent-400: #C9A590;
-  --color-accent-500: #B8917A;
-  --color-accent-600: #A07C66;
+  --color-accent-500: #A8826C;
+  --color-accent-600: #8C6850;
 
-  --color-text-primary: #F5F1ED;
-  --color-text-secondary: #9B9490;
-  --color-text-muted: #5C5856;
+  --color-text-primary: #1A1613;
+  --color-text-secondary: #5C5550;
+  --color-text-muted: #8A827C;
 
   --font-sans: var(--font-inter);
 }
@@ -32,8 +34,8 @@ body {
   color: var(--color-text-primary);
 }
 
-/* ROI Calculator slider */
-.roi-slider {
+/* App-value calculator slider (renamed from .roi-slider). */
+.app-calc-slider {
   -webkit-appearance: none;
   appearance: none;
   height: 6px;
@@ -42,32 +44,34 @@ body {
   outline: none;
 }
 
-.roi-slider::-webkit-slider-thumb {
+.app-calc-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--color-accent-400);
+  background: var(--color-accent-500);
   cursor: pointer;
-  border: 2px solid var(--color-accent-500);
+  border: 2px solid var(--color-accent-600);
   transition: transform 0.15s ease;
+  box-shadow: 0 1px 4px rgba(26, 22, 19, 0.15);
 }
 
-.roi-slider::-webkit-slider-thumb:hover {
+.app-calc-slider::-webkit-slider-thumb:hover {
   transform: scale(1.15);
 }
 
-.roi-slider::-moz-range-thumb {
+.app-calc-slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: var(--color-accent-400);
+  background: var(--color-accent-500);
   cursor: pointer;
-  border: 2px solid var(--color-accent-500);
+  border: 2px solid var(--color-accent-600);
+  box-shadow: 0 1px 4px rgba(26, 22, 19, 0.15);
 }
 
-.roi-slider::-moz-range-track {
+.app-calc-slider::-moz-range-track {
   height: 6px;
   border-radius: 3px;
   background: var(--color-border);

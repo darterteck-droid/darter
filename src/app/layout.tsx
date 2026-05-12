@@ -7,18 +7,28 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const TITLE = "Darter | Custom Native Apps for MedSpas & Aesthetic Practices";
+const DESCRIPTION =
+  "Darter builds custom-branded iOS and Android apps for high-end MedSpas. Your practice in your patients' pocket — booking, push, loyalty, and referrals.";
+
 export const metadata: Metadata = {
-  title: "Darter | AI Receptionist for Aesthetic Clinics",
-  description:
-    "Darter is the 24/7 AI receptionist built for aesthetic clinics. Never miss another call. Every appointment booked. Every dollar captured.",
+  metadataBase: new URL("https://dartertech.com"),
+  title: TITLE,
+  description: DESCRIPTION,
   icons: {
     icon: "/favicon.png",
   },
   openGraph: {
-    title: "Darter | AI Receptionist for Aesthetic Clinics",
-    description:
-      "The 24/7 AI receptionist that ensures your aesthetic clinic never misses a call.",
     type: "website",
+    url: "https://dartertech.com",
+    siteName: "Darter",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 

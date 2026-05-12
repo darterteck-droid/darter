@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
             &ldquo;Darter&rdquo;) and our website{" "}
             <Link
               href="https://www.dartertech.com/"
-              className="text-accent-400 underline hover:text-accent-300"
+              className="text-accent-600 underline hover:text-accent-500"
             >
               https://www.dartertech.com/
             </Link>{" "}
@@ -69,11 +69,12 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
                 When Darter processes data on behalf of our business customers
-                (for example, handling customer calls, recordings, or
-                appointment bookings for aesthetic clinics), we do so in the role
-                of a data processor (or &ldquo;service provider&rdquo; in
-                certain jurisdictions). In those cases, our Customers are the
-                data controllers and their own privacy policies apply.
+                (for example, hosting their custom-built mobile app, delivering
+                push notifications, and routing appointment bookings on behalf
+                of aesthetic clinics and MedSpas), we do so in the role of a
+                data processor (or &ldquo;service provider&rdquo; in certain
+                jurisdictions). In those cases, our Customers are the data
+                controllers and their own privacy policies apply.
               </li>
               <li>
                 This Policy does not cover third-party tools, apps, or services
@@ -112,21 +113,22 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong className="text-text-primary">
-                  Clinic Configuration Data:
+                  Practice Configuration Data:
                 </strong>{" "}
-                when setting up Darter for your aesthetic clinic or med spa, you
-                may provide business information, staff names, service
-                offerings, pricing details, scheduling preferences, and workflow
+                when setting up your Darter-built mobile app, you may provide
+                business information, staff names, treatment offerings, pricing
+                details, scheduling preferences, brand assets, and workflow
                 configurations.
               </li>
               <li>
                 <strong className="text-text-primary">
-                  Recordings &amp; Customer Data:
+                  App &amp; Customer Data:
                 </strong>{" "}
-                when using our voice AI receptionist Services, Customers may
-                submit or generate call recordings, transcripts, appointment
-                bookings, or patient interaction data. We process these strictly
-                under our Customer&rsquo;s instructions.
+                when patients use the Darter-built mobile app, Customers may
+                generate appointment bookings, in-app messages, loyalty and
+                rewards activity, referrals, and other patient-interaction data
+                tied to your practice. We process these strictly under our
+                Customer&rsquo;s instructions.
               </li>
               <li>
                 <strong className="text-text-primary">
@@ -158,14 +160,16 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 <strong className="text-text-primary">Usage Data:</strong>{" "}
-                features used, actions taken, call volumes, appointment
-                bookings, and activity within the Services.
+                features used, actions taken, in-app sessions, appointment
+                bookings, push notification engagement, and activity within the
+                Services.
               </li>
               <li>
                 <strong className="text-text-primary">
                   Device Information:
                 </strong>{" "}
-                device type, operating system, browser, and settings.
+                device type, operating system, browser, mobile push tokens, and
+                settings.
               </li>
               <li>
                 <strong className="text-text-primary">Analytics Data:</strong>{" "}
@@ -201,19 +205,19 @@ export default function PrivacyPolicyPage() {
             <p className="mt-4">We use collected information to:</p>
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
-                Provide, operate, and improve our voice AI receptionist Services
-                for aesthetic clinics and med spas.
+                Provide, operate, and improve our custom-built mobile app
+                Services for aesthetic clinics and MedSpas.
               </li>
               <li>Authenticate users and enable account features.</li>
               <li>Process payments, invoices, and subscriptions.</li>
               <li>
-                Book, reschedule, and manage appointments on behalf of our
-                Customers&rsquo; clinics.
+                Route, reschedule, and manage appointments and push
+                notifications on behalf of our Customers&rsquo; practices.
               </li>
               <li>Respond to inquiries and provide customer support.</li>
               <li>
-                Analyze usage trends, call patterns, and improve Service
-                performance.
+                Analyze usage trends, app engagement patterns, and improve
+                Service performance.
               </li>
               <li>Prevent fraud, security issues, and misuse.</li>
               <li>Comply with legal obligations.</li>
@@ -240,12 +244,14 @@ export default function PrivacyPolicyPage() {
                 their behalf, including their clinic staff and authorized users).
               </li>
               <li>
-                With trusted service providers (e.g., AWS, Vercel, ElevenLabs,
-                telephony providers) who support our infrastructure and
-                operations.
+                With trusted service providers (e.g., AWS, Vercel, Apple App
+                Store, Google Play, push notification and mobile analytics
+                providers, Stripe for payments) who support our infrastructure
+                and operations.
               </li>
               <li>
-                With Integration Partners (EMR/PMS systems, scheduling
+                With Integration Partners (practice management systems such as
+                Boulevard, Mangomint, Zenoti, Aesthetic Record, and similar
                 platforms) when you connect those services with Darter, subject
                 to your configuration settings.
               </li>
@@ -275,11 +281,12 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>Keep you logged in.</li>
               <li>
-                Remember preferences and clinic configurations.
+                Remember preferences and practice configurations.
               </li>
               <li>
-                Understand how Services are used, including call handling
-                metrics.
+                Understand how Services are used, including in-app engagement
+                metrics, appointment-booking flows, and push notification
+                performance.
               </li>
               <li>Improve functionality and performance.</li>
             </ul>
@@ -319,9 +326,10 @@ export default function PrivacyPolicyPage() {
             <p className="mt-4">
               We retain Personal Information as long as necessary to provide our
               Services or comply with legal obligations. Customer data (e.g.,
-              call recordings, transcripts, appointment bookings) is retained
-              according to our Customer agreements and can be configured based on
-              your clinic&rsquo;s preferences.
+              appointment bookings, in-app messages, loyalty activity, and push
+              notification engagement) is retained according to our Customer
+              agreements and can be configured based on your practice&rsquo;s
+              preferences.
             </p>
           </section>
 
@@ -346,7 +354,7 @@ export default function PrivacyPolicyPage() {
               To exercise your rights, contact us at{" "}
               <a
                 href="mailto:privacy@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 privacy@dartertech.com
               </a>
@@ -361,14 +369,15 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p className="mt-4">
               Darter is designed for use by aesthetic clinics and medical spas.
-              While we process voice interactions and appointment data, we are
-              not a covered entity under HIPAA. However, we take data protection
-              seriously:
+              While we process appointment, loyalty, and in-app interaction
+              data, we are not a covered entity under HIPAA. However, we take
+              data protection seriously:
             </p>
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
                 We implement appropriate technical and organizational measures
-                to protect personal data.
+                to protect personal data, including encryption in transit and at
+                rest.
               </li>
               <li>
                 Customers are responsible for ensuring that any patient
@@ -376,9 +385,15 @@ export default function PrivacyPolicyPage() {
                 healthcare privacy laws.
               </li>
               <li>
-                Call recordings and transcripts are processed at the direction of
-                our Customers (the clinics) and are governed by their privacy
+                Appointment bookings, in-app messages, and other
+                patient-interaction data are processed at the direction of our
+                Customers (the practices) and are governed by their privacy
                 practices.
+              </li>
+              <li>
+                Push notifications are sent only to patients who have granted
+                operating-system-level permission to receive them. Patients may
+                revoke permission at any time through their device settings.
               </li>
             </ul>
           </section>
@@ -394,7 +409,7 @@ export default function PrivacyPolicyPage() {
               from a child, contact us at{" "}
               <a
                 href="mailto:privacy@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 privacy@dartertech.com
               </a>{" "}
@@ -417,8 +432,8 @@ export default function PrivacyPolicyPage() {
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>Your consent.</li>
               <li>
-                Performance of a contract (providing our AI receptionist
-                Services).
+                Performance of a contract (providing our custom-built mobile
+                app Services).
               </li>
               <li>
                 Legitimate interests (improving our Services, preventing fraud).
@@ -439,7 +454,7 @@ export default function PrivacyPolicyPage() {
               exercise your rights, contact us at{" "}
               <a
                 href="mailto:privacy@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 privacy@dartertech.com
               </a>
@@ -457,7 +472,7 @@ export default function PrivacyPolicyPage() {
               Contact:{" "}
               <a
                 href="mailto:privacy@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 privacy@dartertech.com
               </a>

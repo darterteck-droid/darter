@@ -1,122 +1,183 @@
 import {
-  Phone,
+  Smartphone,
   CalendarCheck,
-  RefreshCw,
-  Clock,
-  Mic,
-  CalendarPlus,
-  MessageCircleQuestion,
-  FileText,
-  Plug,
+  Bell,
+  Sparkles,
+  Heart,
+  Palette,
+  Compass,
+  Hammer,
+  Rocket,
 } from "lucide-react";
 
 export const DEMO_URL = "https://cal.com/darter-oi0epj/30min";
 
 export const NAV_LINKS = [
   { label: "Platform", href: "#features" },
+  { label: "Showcase", href: "#showcase" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-  { label: "About Us", href: "#founders" },
+  { label: "About", href: "#founders" },
 ];
 
+/**
+ * STORE_LINKS — until Beauty Co. apps are live in the stores, both badges point to
+ * the in-page showcase anchor. Swap to real store URLs once available.
+ */
+export const STORE_LINKS = {
+  appStore: "#showcase",
+  googlePlay: "#showcase",
+};
+
+/**
+ * Stats kept for inline copy use and any future "why an app" section. Not currently
+ * rendered as a standalone section.
+ */
 export const STATS = [
   {
-    stat: "30%",
-    label: "of inbound calls go unanswered",
+    stat: "73%",
+    label: "of patient bookings are now made on mobile",
     detail:
-      "Your front desk can't pick up every ring while managing patients and paperwork.",
+      "If your booking lives only on a web page, you're losing the patients who never get past the App Store.",
   },
   {
-    stat: "62%",
-    label: "of callers won't leave a voicemail",
+    stat: "7x",
+    label: "higher open rates for push vs. SMS",
     detail:
-      "They'll call your competitor instead. One missed call, one lost patient.",
+      "Push notifications cut through the noise. Fill a same-day cancellation in minutes.",
   },
   {
-    stat: "$200+",
-    label: "average revenue per missed call",
+    stat: "3-5x",
+    label: "valuation multiplier on engaged patient lift",
     detail:
-      "A single missed consultation costs you hundreds in lost treatments.",
+      "When you grow recurring patient revenue, you don't just earn more — your practice is worth more.",
   },
 ];
 
 export const STEPS = [
   {
-    icon: Phone,
-    title: "Darter Answers Every Call",
+    icon: Compass,
+    title: "Discovery",
     description:
-      "Day or night, Darter picks up instantly. No hold music. No voicemail.",
+      "We sit down with you to map your brand, your patient journey, and the features that matter for your practice.",
   },
   {
-    icon: CalendarCheck,
-    title: "Books Appointments & Answers Questions",
+    icon: Hammer,
+    title: "Design & Build",
     description:
-      "Checks availability, books appointments, and answers common questions. Like your best receptionist.",
+      "Hand-built native iOS and Android, designed around your brand. Booking, push, loyalty, referrals — all wired in.",
   },
   {
-    icon: RefreshCw,
-    title: "Syncs With Your Systems",
+    icon: Rocket,
+    title: "Launch & Maintain",
     description:
-      "Every booking and call summary syncs to your clinic software automatically.",
+      "We ship to the App Store and Google Play under your name, then handle every OS update, store compliance change, and feature ship that follows.",
   },
 ];
 
 export const FEATURES = [
   {
-    icon: Clock,
-    title: "24/7 Call Coverage",
+    icon: Smartphone,
+    title: "Native iOS + Android",
     description:
-      "Every call answered. Nights, weekends, lunch hours, and holidays included.",
+      "Published under your brand in both stores. Not a template, not a web wrapper — actual native apps your patients keep on their home screen.",
   },
   {
-    icon: Mic,
-    title: "A Natural, Professional Voice",
+    icon: CalendarCheck,
+    title: "In-App Booking & Rescheduling",
     description:
-      "Polished, calm, and conversational. Patients feel taken care of from the start.",
+      "Real-time availability, deposits, reminders. The booking lives in your app, not on someone else's portal.",
   },
   {
-    icon: CalendarPlus,
-    title: "Appointment Booking",
+    icon: Bell,
+    title: "Push Notifications & Promos",
     description:
-      "Real-time scheduling. Check availability and book while patient intent is high.",
+      "Reach every patient instantly when a slot opens, a promo drops, or you need to fill the day. Open rates SMS can't touch.",
   },
   {
-    icon: MessageCircleQuestion,
-    title: "Answers to Everyday Questions",
+    icon: Sparkles,
+    title: "Loyalty & Rewards",
     description:
-      "Services, pricing, pre-care, post-care. Handled automatically.",
+      "Points, tiers, in-app currency. Designed around how aesthetic patients actually rebook — not retrofitted from retail.",
   },
   {
-    icon: FileText,
-    title: "Call Summaries",
+    icon: Heart,
+    title: "Built-In Referrals",
     description:
-      "Who called, what they needed, and what action was taken. All in one place.",
+      "Patients refer friends with a tap. Both sides get rewarded. Tracked, redeemable, painless.",
   },
   {
-    icon: Plug,
-    title: "Seamless Integrations",
+    icon: Palette,
+    title: "Your Brand In Their Pocket",
     description:
-      "Connects with your existing tools, calendars, and workflows.",
+      "Logo on the home screen. App icon they tap by name. Brand presence no third-party portal can give you.",
   },
 ];
 
-export const TESTIMONIALS = [
+/**
+ * SHOWCASE_SCREENS — Beauty Co. app screens, cropped to clean phone screens and wrapped
+ * in <PhoneFrame /> on render. The first entry is reused as the Hero phone.
+ */
+export const SHOWCASE_SCREENS = [
   {
-    quote: "Darter paid for itself in the first week.",
-    body: "We were missing 8–10 calls a day during peak hours. Now every single one gets answered and half of those are booked before my team even checks the dashboard.",
-    name: "Dr. Sarah Chen",
-    title: "Medical Director, Glow Aesthetics, Los Angeles",
+    src: "/showcase/beauty-co-1-welcome.png",
+    alt: "Beauty Co. app home screen welcoming Sarah with reward unlocked and Beauty Co+ membership",
+    caption: "A home screen that picks up where the last visit left off.",
   },
   {
-    quote: "Our no-show rate dropped by 35%.",
-    body: "Darter confirms appointments and sends reminders automatically. Patients love how easy it is, and we love not chasing people down.",
-    name: "Rachel Kim",
-    title: "Practice Manager, Luxe Skin Clinic, Miami",
+    src: "/showcase/beauty-co-2-services.png",
+    alt: "Beauty Co. recommended services grid: Botox, Dermal Fillers, BeautyCo facial, HydraFacial",
+    caption:
+      "A curated treatment menu — your services, your photography, your brand.",
   },
   {
-    quote: "It's like hiring the perfect receptionist who never calls in sick.",
-    body: "We went from losing weekend calls to booking them. The ROI was obvious within a month.",
-    name: "Dr. James Whitfield",
-    title: "Owner, Revive MedSpa, New York",
+    src: "/showcase/beauty-co-3-rewards.png",
+    alt: "Beauty Co. rewards detail screen with how-to-earn points list",
+    caption:
+      "Loyalty that drives real rebooking — points, perks, and clinic cash.",
+  },
+  {
+    src: "/showcase/beauty-co-4-messages.png",
+    alt: "Beauty Co. messages thread with Kelly, the practice's founder/owner",
+    caption:
+      "A direct line from owner to patient. Personal, on-brand, always-on.",
+  },
+  {
+    src: "/showcase/beauty-co-5-offers.png",
+    alt: "Beauty Co. offers screen with priority booking pass and discount",
+    caption:
+      "Time-limited offers and priority booking, delivered in one push.",
+  },
+  {
+    src: "/showcase/beauty-co-6-profile.png",
+    alt: "Beauty Co. patient profile showing visits, points, and savings",
+    caption:
+      "Patient identity in your brand — visits, points, savings, all on their phone.",
   },
 ];
+
+/**
+ * APP_VALUE_DEFAULTS — single source of truth for the AppValueCalculator math.
+ * Lift assumptions are conservative midpoints of public industry benchmarks
+ * (Airship push engagement; Bond Brand Loyalty engaged-member spend lift;
+ * typical PE/M&A multiples on recurring-revenue lift in aesthetics).
+ */
+export const APP_VALUE_DEFAULTS = {
+  avgTicket: 450, // $
+  avgTicketMin: 100,
+  avgTicketMax: 2000,
+
+  activePatients: 800, // # in last 12 months
+  activePatientsMin: 100,
+  activePatientsMax: 10000,
+
+  currentRebookRate: 35, // %
+  currentRebookRateMin: 5,
+  currentRebookRateMax: 80,
+
+  monthlyVisitsPerActive: 0.6, // constant — average aesthetic-visit cadence
+  rebookLiftPoints: 12,        // +12 pp from app push + in-app booking
+  ticketLift: 0.08,            // +8% from loyalty/upsell prompts
+  referralLift: 0.05,          // +5% new active patients/year
+  valuationMultiple: 4,        // illustrative 3–5x recurring revenue multiple
+};

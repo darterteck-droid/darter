@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw asset handoffs from the user — staged into /public during build, not tracked
+/new website photos/

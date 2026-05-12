@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Terms of Service | Darter",
   description:
-    "Darter Terms of Service — the agreement governing your use of our voice AI receptionist platform.",
+    "Darter Terms of Service — the agreement governing your use of Darter's custom-built mobile app development and hosting platform for aesthetic practices.",
 };
 
 export default function TermsOfServicePage() {
@@ -48,9 +48,10 @@ export default function TermsOfServicePage() {
           </p>
           <p>
             This Agreement governs your access to and use of Darter&rsquo;s
-            software-as-a-service platform, voice AI receptionist solutions,
-            call and appointment automation tools, and related services designed
-            specifically for aesthetic clinics, med spas, and cosmetic practices
+            custom mobile app development, hosted backend infrastructure for
+            native iOS and Android applications, push notification systems,
+            in-app booking integrations, and related services designed
+            specifically for aesthetic clinics, MedSpas, and cosmetic practices
             (&ldquo;Services&rdquo;).
           </p>
           <p>
@@ -76,16 +77,18 @@ export default function TermsOfServicePage() {
               </li>
               <li>
                 <strong className="text-text-primary">Darter Materials:</strong>{" "}
-                All software, documentation, workflows, AI models, voice
-                scripts, integrations, appointment booking logic, and other
-                intellectual property provided by Darter.
+                All software, documentation, mobile application architecture,
+                workflows, integrations, push notification infrastructure,
+                booking and loyalty logic, and other intellectual property
+                provided by Darter.
               </li>
               <li>
                 <strong className="text-text-primary">Customer Data:</strong>{" "}
-                Any information, data, or content submitted by you or your users
-                through the Services, including but not limited to call
-                recordings, transcripts, appointment bookings, clinic
-                configurations, and patient interaction data.
+                Any information, data, or content submitted by you or your
+                users through the Services, including but not limited to
+                appointment bookings, in-app messages, loyalty and rewards
+                activity, referrals, practice configurations, brand assets, and
+                patient interaction data.
               </li>
               <li>
                 <strong className="text-text-primary">Order Form:</strong> The
@@ -94,9 +97,11 @@ export default function TermsOfServicePage() {
               </li>
               <li>
                 <strong className="text-text-primary">Services:</strong>{" "}
-                Darter&rsquo;s voice AI receptionist, call handling, appointment
-                booking, scheduling, chat automation, integrations, and related
-                SaaS offerings for aesthetic clinics and med spas.
+                Darter&rsquo;s custom mobile application development, native
+                iOS and Android builds, hosted backend infrastructure, push
+                notification systems, in-app booking integrations, loyalty and
+                referrals systems, ongoing maintenance, and related offerings
+                for aesthetic clinics and MedSpas.
               </li>
               <li>
                 <strong className="text-text-primary">Users:</strong>{" "}
@@ -117,35 +122,49 @@ export default function TermsOfServicePage() {
             <p className="mt-4">
               Subject to this Agreement and applicable fees, Darter grants
               Customer a limited, non-exclusive, non-transferable right to
-              access and use the Services during the Subscription Term solely for
-              Customer&rsquo;s internal business purposes in connection with
-              operating an aesthetic clinic, med spa, or cosmetic practice.
+              access and use the Services during the Subscription Term solely
+              for Customer&rsquo;s internal business purposes in connection with
+              operating an aesthetic clinic, MedSpa, or cosmetic practice.
             </p>
 
             <h3 className="mt-6 text-xl font-medium text-text-primary">
               2.2 Service Description
             </h3>
             <p className="mt-4">
-              Darter provides an AI-powered voice receptionist that:
+              Darter provides custom-built native mobile applications and the
+              hosted backend infrastructure to operate them. The Services
+              include:
             </p>
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
-                Answers inbound phone calls for Customer&rsquo;s clinic 24/7
+                Custom design and native iOS and Android application
+                development, published in the Apple App Store and Google Play
+                under the Customer&rsquo;s brand
               </li>
               <li>
-                Books, reschedules, and cancels appointments in real-time
+                Hosted backend infrastructure (including authentication,
+                storage, and APIs) to operate the application
               </li>
               <li>
-                Responds to common patient questions about services, pricing,
-                and pre/post-care instructions
+                Push notification infrastructure and practice-side controls for
+                sending in-app messages and promotional notifications
               </li>
               <li>
-                Handles unlimited simultaneous calls without wait times
+                In-app appointment booking, rescheduling, and cancellation,
+                with two-way synchronization to the Customer&rsquo;s existing
+                practice management system
               </li>
-              <li>Routes and escalates calls when appropriate</li>
               <li>
-                Provides analytics and tracking of call volume, appointments
-                booked, and revenue impact
+                Loyalty, rewards, and built-in referral systems
+              </li>
+              <li>
+                Analytics and tracking of app installs, in-app sessions,
+                appointments booked through the app, and push notification
+                engagement
+              </li>
+              <li>
+                Ongoing maintenance, including iOS and Android OS updates,
+                App Store and Google Play compliance, and security patches
               </li>
             </ul>
 
@@ -163,11 +182,13 @@ export default function TermsOfServicePage() {
               2.4 Ownership
             </h3>
             <p className="mt-4">
-              All rights, title, and interest in the Services, Darter Materials,
-              and all related intellectual property belong exclusively to Darter.
-              No rights are granted except as expressly provided herein. Customer
-              acknowledges that Darter&rsquo;s voice AI technology, workflows,
-              and appointment booking systems are proprietary.
+              All rights, title, and interest in the Services, Darter
+              Materials, and all related intellectual property belong
+              exclusively to Darter. No rights are granted except as expressly
+              provided herein. Customer acknowledges that Darter&rsquo;s mobile
+              application architecture, push notification systems, in-app
+              booking integrations, and patient engagement logic are
+              proprietary.
             </p>
 
             <h3 className="mt-6 text-xl font-medium text-text-primary">
@@ -201,51 +222,48 @@ export default function TermsOfServicePage() {
             </h2>
 
             <h3 className="mt-6 text-xl font-medium text-text-primary">
-              3.1 Available Plans
+              3.1 Pricing Structure
             </h3>
-
-            <div className="mt-4 space-y-6">
-              <div>
-                <h4 className="font-semibold text-text-primary">
-                  Growth Plan
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>$597/month</li>
-                  <li>1,500 minutes included</li>
-                  <li>$0.25/minute overage charge</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-text-primary">Scale Plan</h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>$1,097/month</li>
-                  <li>4,000 minutes included</li>
-                  <li>$0.22/minute overage charge</li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-text-primary">
-                  Enterprise Plan
-                </h4>
-                <ul className="mt-2 list-disc space-y-1 pl-6">
-                  <li>Custom pricing based on Customer requirements</li>
-                  <li>Multi-location support</li>
-                  <li>Custom SLAs</li>
-                  <li>Additional features and configuration options</li>
-                </ul>
-              </div>
-            </div>
+            <p className="mt-4">
+              Pricing for the Services is set on a per-engagement basis and is
+              documented in the Customer&rsquo;s Order Form. Every Darter
+              engagement consists of two components:
+            </p>
+            <ul className="mt-4 list-disc space-y-3 pl-6">
+              <li>
+                <strong className="text-text-primary">
+                  One-time Build Fee:
+                </strong>{" "}
+                a setup investment covering custom design, native iOS and
+                Android development, App Store and Google Play submission, and
+                white-glove launch.
+              </li>
+              <li>
+                <strong className="text-text-primary">
+                  Ongoing Maintenance Subscription:
+                </strong>{" "}
+                a recurring monthly fee covering hosted backend infrastructure,
+                OS and store compliance updates, security patches, feature
+                ships, push notification infrastructure, and analytics.
+              </li>
+            </ul>
+            <p className="mt-4">
+              Both components are tailored to the Customer&rsquo;s practice
+              size, feature set, and integration needs. Exact amounts are
+              confirmed in the Order Form executed by Customer and Darter.
+            </p>
 
             <h3 className="mt-6 text-xl font-medium text-text-primary">
               3.2 Billing
             </h3>
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
-                Fees are billed monthly in advance unless otherwise agreed in
-                writing.
+                The one-time Build Fee is invoiced according to the milestone
+                schedule in the Order Form.
               </li>
               <li>
-                Overage charges are billed in arrears based on actual usage.
+                The Ongoing Maintenance Subscription is billed monthly in
+                advance unless otherwise agreed in writing.
               </li>
               <li>All fees are exclusive of applicable taxes.</li>
             </ul>
@@ -320,7 +338,7 @@ export default function TermsOfServicePage() {
               requirements. Contact{" "}
               <a
                 href="mailto:privacy@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 privacy@dartertech.com
               </a>{" "}
@@ -379,12 +397,14 @@ export default function TermsOfServicePage() {
               </li>
               <li>
                 Ensuring that your use of the Services complies with applicable
-                laws and regulations governing aesthetic clinics, med spas, and
+                laws and regulations governing aesthetic clinics, MedSpas, and
                 cosmetic practices.
               </li>
               <li>
-                Obtaining all necessary consents and permissions for call
-                recording, if applicable.
+                Obtaining all necessary consents and permissions from patients
+                for the collection and processing of their data through the
+                application, including push notification consent and any
+                applicable healthcare disclosures.
               </li>
               <li>
                 Ensuring that patient information shared with Darter is handled
@@ -499,9 +519,12 @@ export default function TermsOfServicePage() {
               </li>
             </ul>
             <p className="mt-4">
-              Customer acknowledges that Darter&rsquo;s AI receptionist uses
-              artificial intelligence and machine learning, and results may vary
-              based on call content, audio quality, and other factors.
+              Customer acknowledges that the Services rely on third-party
+              platforms — including the Apple App Store, Google Play, the
+              Customer&rsquo;s existing practice management system, push
+              notification gateways, and operating-system-level permissions
+              granted by patients — and that the availability, behavior, and
+              policies of those platforms are outside Darter&rsquo;s control.
             </p>
 
             <h3 className="mt-6 text-xl font-medium text-text-primary">
@@ -649,14 +672,15 @@ export default function TermsOfServicePage() {
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
                 Customer Data, including any claims related to patient
-                information or call recordings
+                information, appointment bookings, in-app messages, or push
+                notification content authored or directed by Customer
               </li>
               <li>
                 Customer&rsquo;s use of the Services in violation of this
                 Agreement or applicable law
               </li>
               <li>
-                Customer&rsquo;s aesthetic clinic, med spa, or cosmetic practice
+                Customer&rsquo;s aesthetic clinic, MedSpa, or cosmetic practice
                 operations
               </li>
               <li>Any products or services offered by Customer</li>
@@ -707,9 +731,10 @@ export default function TermsOfServicePage() {
             </p>
             <ul className="mt-4 list-disc space-y-3 pl-6">
               <li>
-                The Darter platform, including voice AI technology, natural
-                language processing, appointment booking logic, and workflow
-                automation
+                The Darter platform, including the mobile application
+                architecture, push notification systems, in-app booking
+                integrations, loyalty and referral logic, and patient
+                engagement systems
               </li>
               <li>
                 All Darter Materials, documentation, and training content
@@ -755,7 +780,7 @@ export default function TermsOfServicePage() {
               <strong className="text-text-primary">Darter:</strong>{" "}
               <a
                 href="mailto:legal@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 legal@dartertech.com
               </a>{" "}
@@ -864,7 +889,7 @@ export default function TermsOfServicePage() {
               Email:{" "}
               <a
                 href="mailto:legal@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 legal@dartertech.com
               </a>
@@ -873,7 +898,7 @@ export default function TermsOfServicePage() {
               Support:{" "}
               <a
                 href="mailto:support@dartertech.com"
-                className="text-accent-400 underline hover:text-accent-300"
+                className="text-accent-600 underline hover:text-accent-500"
               >
                 support@dartertech.com
               </a>

@@ -1,11 +1,12 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
-import DemoSection from "@/components/sections/DemoSection";
+import TrustStrip from "@/components/sections/TrustStrip";
+import AppShowcase from "@/components/sections/AppShowcase";
 import Features from "@/components/sections/Features";
-import RoiCalculator from "@/components/sections/RoiCalculator";
+import AppValueCalculator from "@/components/sections/AppValueCalculator";
 import Founders from "@/components/sections/Founders";
-import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
+import Pricing from "@/components/sections/Pricing";
 import CtaSection from "@/components/sections/CtaSection";
 import Footer from "@/components/layout/Footer";
 
@@ -14,12 +15,13 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <DemoSection />
-      <RoiCalculator />
+      <TrustStrip />
+      <AppShowcase />
       <Features />
-      <Pricing />
+      <AppValueCalculator />
       <Founders />
       <FAQ />
+      <Pricing />
       <CtaSection />
       <Footer />
     </main>

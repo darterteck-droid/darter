@@ -1,37 +1,38 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Plus, Minus, ArrowRight } from "lucide-react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { DEMO_URL } from "@/lib/constants";
-import Link from "next/link";
 
 const faqs = [
   {
-    question: "How do I get started with Darter?",
+    question: "Is this a template, or a real native app?",
     answer:
-      "Once you book a demo, we'll walk you through the next steps, configure your system, connect the tools you already use, and help your team get up and running smoothly.",
+      "A real native app — built per practice, published in the App Store and Google Play under your brand. Not a PWA, not a wrapper, not a multi-tenant 'select your practice' setup. Your patients tap your icon, see your name, and never know Darter exists.",
   },
   {
-    question: "How is Darter different from a traditional answering service?",
+    question: "How long does it take to launch?",
     answer:
-      "Traditional answering services usually take messages. Darter does more. It can answer questions, book appointments, route calls intelligently, and create a more consistent patient experience without adding work to your team.",
+      "Most builds run 6–10 weeks from kickoff, including App Store and Google Play review. We don't sell speed — we sell craft. The result is an app you'd actually want representing your brand on a patient's home screen.",
   },
   {
-    question: "Does Darter work with my current phone system?",
+    question: "Will my patients actually download it?",
     answer:
-      "In most cases, yes. We'll review your current setup during the demo and show you the best way to integrate Darter into your existing workflow.",
+      "Yes, when the value is real. We design every launch around push, loyalty, and exclusive offers that give patients a concrete reason to install — and to keep coming back. Practices with engaged patient bases routinely see 40–60% of active patients install within the first 90 days.",
   },
   {
-    question: "Can I customize how Darter responds?",
+    question:
+      "How does this work with Boulevard, Mangomint, Zenoti, or my current PMS?",
     answer:
-      "Yes. Darter can be tailored to your clinic's services, tone, policies, and scheduling preferences so the experience feels aligned with your brand.",
+      "We sit on top of your existing platform. Bookings made in the app sync back to your system of record, so your front-desk workflow doesn't change. We're the patient-facing layer — not a replacement for the platform you already trust to run the business.",
   },
   {
-    question: "What happens if Darter cannot handle a call?",
+    question: "What does ongoing maintenance cover?",
     answer:
-      "When a call needs human attention, Darter can route it according to your preferred workflow so the right person takes over at the right time.",
+      "iOS and Android OS updates, App Store and Play Store compliance, security patches, feature improvements, push campaign tools, and analytics. You're not buying a one-time deliverable — you're buying a partner who keeps the app working as the platforms evolve.",
   },
 ];
 
@@ -39,31 +40,34 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <SectionWrapper id="faq">
+    <SectionWrapper id="faq" className="bg-surface-sunken">
       <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         {/* Left */}
         <AnimateOnScroll>
-          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Frequently Asked Questions
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
+            FAQ
+          </p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+            Answers to the questions every founder asks us.
           </h2>
           <p className="mt-4 text-text-secondary">
-            Everything you need to know about Darter, implementation, and
-            getting started.
+            What we build, how long it takes, and how it fits with the
+            platform you already use.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-border bg-surface-elevated p-6">
-            <p className="text-lg font-semibold text-accent-400">
+          <div className="mt-8 rounded-2xl border border-border bg-surface p-6 shadow-[0_8px_24px_-12px_rgba(26,22,19,0.12)]">
+            <p className="text-lg font-semibold text-accent-600">
               Still have questions?
             </p>
             <p className="mt-2 text-sm text-text-secondary">
-              We&apos;ll walk through your workflow and show you how Darter
-              fits into your clinic.
+              We&apos;ll walk through your practice, your patients, and the
+              shape of the app that fits.
             </p>
             <Link
               href={DEMO_URL}
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-400 transition-colors hover:text-accent-300"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-600 transition-colors hover:text-accent-500"
             >
-              Schedule a Consultation
+              Book a Demo
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -77,19 +81,20 @@ export default function FAQ() {
                 key={i}
                 className={`overflow-hidden rounded-xl border transition-colors ${
                   openIndex === i
-                    ? "border-accent-400/30 bg-surface-elevated"
-                    : "border-border bg-surface"
+                    ? "border-accent-400/60 bg-surface"
+                    : "border-border bg-surface/70 hover:bg-surface"
                 }`}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
                   className="flex w-full items-center justify-between px-6 py-5 text-left"
+                  aria-expanded={openIndex === i}
                 >
                   <span className="pr-4 font-semibold text-text-primary">
                     {faq.question}
                   </span>
                   {openIndex === i ? (
-                    <Minus className="h-5 w-5 shrink-0 text-accent-400" />
+                    <Minus className="h-5 w-5 shrink-0 text-accent-600" />
                   ) : (
                     <Plus className="h-5 w-5 shrink-0 text-text-muted" />
                   )}

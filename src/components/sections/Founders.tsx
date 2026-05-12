@@ -5,24 +5,16 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 export default function Founders() {
   return (
     <SectionWrapper id="founders" className="bg-surface">
-      <AnimateOnScroll>
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-            Built for the Reality of a Busy Clinic
-          </h2>
-        </div>
-      </AnimateOnScroll>
       <div className="mx-auto max-w-5xl">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Photo */}
           <AnimateOnScroll>
             <div className="relative mx-auto w-full max-w-md">
-              {/* Glow behind photo */}
-              <div className="absolute -inset-4 rounded-3xl bg-accent-400/5 blur-2xl" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface-elevated">
+              <div className="absolute -inset-4 rounded-3xl bg-accent-200/40 blur-2xl" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface-sunken shadow-[0_24px_60px_-30px_rgba(26,22,19,0.25)]">
                 <Image
                   src="/founders.jpg"
-                  alt="David and Carter, co-founders of Darter"
+                  alt="David and Carter, co-founders of Darter, working in the studio"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -33,27 +25,32 @@ export default function Founders() {
 
           {/* Story */}
           <AnimateOnScroll delay={0.15}>
-            <p className="text-sm font-semibold uppercase tracking-widest text-accent-400">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
               Meet the Founders
             </p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              David &amp; Carter
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+              We&apos;re builders, first.
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                We started Darter after seeing the same problem in clinic after
-                clinic: front-desk teams pulled in too many directions at once.
-                The phone rings, something has to wait.
+                We started Darter building voice AI for aesthetic clinics. What
+                we learned in the field reset our thinking: the best practices
+                already pick up the phone. What they don&apos;t have — what
+                their patients keep asking for — is a way to live inside the
+                relationship between visits.
               </p>
               <p>
-                We built Darter so your team stays focused on the patient in
-                front of them, while every call is still answered with speed
-                and professionalism.
+                So we pivoted. Today we hand-build native iOS and Android apps
+                for a small number of MedSpas every quarter. No templates, no
+                white-label shells. Each one ships to the App Store and Google
+                Play under your name, with the booking, push, loyalty, and
+                referral plumbing handled for you.
+              </p>
+              <p className="text-base text-text-muted">
+                — David &amp; Carter
               </p>
             </div>
-            <div className="mt-8 flex items-center gap-3">
-              <div className="h-px flex-1 bg-gradient-to-r from-accent-400/30 to-transparent" />
-            </div>
+            <div className="mt-8 h-px bg-gradient-to-r from-accent-400/40 to-transparent" />
           </AnimateOnScroll>
         </div>
       </div>

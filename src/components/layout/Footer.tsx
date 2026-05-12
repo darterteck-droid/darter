@@ -1,8 +1,15 @@
 import Link from "next/link";
+import StoreBadges from "@/components/ui/StoreBadges";
 
 /* ── Compliance badge SVGs ── */
 
-function sealPath(cx: number, cy: number, outerR: number, innerR: number, scallops: number) {
+function sealPath(
+  cx: number,
+  cy: number,
+  outerR: number,
+  innerR: number,
+  scallops: number,
+) {
   const pts: string[] = [];
   const total = scallops * 2;
   for (let i = 0; i < total; i++) {
@@ -14,11 +21,16 @@ function sealPath(cx: number, cy: number, outerR: number, innerR: number, scallo
 }
 
 const SEAL = sealPath(50, 50, 47, 40, 18);
-const SHIELD = "M50 4 C50 4 90 18 90 18 L90 48 C90 74 72 90 50 98 C28 90 10 74 10 48 L10 18 Z";
+const SHIELD =
+  "M50 4 C50 4 90 18 90 18 L90 48 C90 74 72 90 50 98 C28 90 10 74 10 48 L10 18 Z";
 
 function Soc2Badge({ type }: { type: "I" | "II" }) {
   return (
-    <svg viewBox="0 0 100 100" className="h-16 w-16 sm:h-20 sm:w-20" aria-label={`AICPA SOC 2 Type ${type}`}>
+    <svg
+      viewBox="0 0 100 100"
+      className="h-16 w-16 sm:h-20 sm:w-20"
+      aria-label={`AICPA SOC 2 Type ${type}`}
+    >
       <path d={SEAL} fill="none" stroke="currentColor" strokeWidth="2" />
       <text x="50" y="34" textAnchor="middle" fill="currentColor" fontSize="10" fontWeight="600" fontFamily="sans-serif">AICPA</text>
       <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="700" fontFamily="sans-serif">SOC 2</text>
@@ -43,11 +55,8 @@ function GdprBadge() {
   return (
     <svg viewBox="0 0 100 100" className="h-16 w-16 sm:h-20 sm:w-20" aria-label="GDPR">
       <path d={SHIELD} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-      {/* Padlock shackle */}
       <path d="M40 48 V40 C40 30 60 30 60 40 V48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      {/* Padlock body */}
       <rect x="36" y="48" width="28" height="20" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
-      {/* Keyhole */}
       <circle cx="50" cy="56" r="2.5" fill="currentColor" />
       <rect x="48.8" y="56" width="2.4" height="5" rx="1" fill="currentColor" />
       <text x="50" y="84" textAnchor="middle" fill="currentColor" fontSize="12" fontWeight="700" fontFamily="sans-serif">GDPR</text>
@@ -59,12 +68,9 @@ function HipaaBadge() {
   return (
     <svg viewBox="0 0 100 100" className="h-16 w-16 sm:h-20 sm:w-20" aria-label="HIPAA">
       <path d={SHIELD} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-      {/* Caduceus - staff */}
       <line x1="50" y1="20" x2="50" y2="62" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      {/* Wings */}
       <path d="M50 24 L38 19 L43 25" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M50 24 L62 19 L57 25" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      {/* Serpents */}
       <path d="M50 28 Q42 33 50 38 Q58 43 50 48 Q42 53 50 58" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       <path d="M50 28 Q58 33 50 38 Q42 43 50 48 Q58 53 50 58" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       <text x="50" y="82" textAnchor="middle" fill="currentColor" fontSize="11" fontWeight="700" fontFamily="sans-serif">HIPAA</text>
@@ -74,8 +80,8 @@ function HipaaBadge() {
 
 function ComplianceBadges() {
   return (
-    <div className="rounded-2xl bg-accent-400/[0.07] px-6 py-5">
-      <div className="flex flex-wrap items-center justify-center gap-5 text-accent-500 sm:gap-8">
+    <div className="rounded-2xl bg-accent-100/60 px-6 py-5">
+      <div className="flex flex-wrap items-center justify-center gap-5 text-accent-600 sm:gap-8">
         <Soc2Badge type="I" />
         <Soc2Badge type="II" />
         <IsoBadge />
@@ -88,10 +94,10 @@ function ComplianceBadges() {
 
 const footerLinks = {
   Product: [
-    { label: "How It Works", href: "#how-it-works" },
+    { label: "Showcase", href: "#showcase" },
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Integrations", href: "#" },
+    { label: "FAQ", href: "#faq" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
@@ -102,18 +108,27 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           {/* Brand */}
-          <Link href="/" className="text-xl font-bold text-accent-400">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-xl font-bold text-text-primary"
+          >
+            <span className="h-2 w-2 rounded-full bg-accent-500" aria-hidden />
             Darter
           </Link>
-          <p className="mt-3 text-sm text-text-secondary">
-            The AI receptionist for aesthetic clinics.
+          <p className="mt-3 max-w-md text-sm text-text-secondary">
+            Custom-built mobile apps for the world&apos;s best MedSpas.
           </p>
 
+          {/* Store badges row */}
+          <div className="mt-8">
+            <StoreBadges variant="footer" />
+          </div>
+
           {/* Link columns + compliance badges */}
-          <div className="mt-8 flex flex-wrap items-start justify-center gap-12 sm:gap-16">
+          <div className="mt-12 flex flex-wrap items-start justify-center gap-12 sm:gap-16">
             <ComplianceBadges />
             {Object.entries(footerLinks).map(([heading, links]) => (
               <div key={heading}>
