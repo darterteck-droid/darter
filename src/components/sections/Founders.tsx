@@ -30,23 +30,18 @@ export default function Founders() {
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                We talked to a lot of aesthetic practices, and the same
-                thing kept coming up. Great clients. Beautiful spaces. A
-                real waiting list. But the moment a patient walked out,
-                the relationship basically went silent until the next
-                visit. A mobile app fixes that.
+                We started Darter to build native mobile apps for the
+                world&apos;s leading aesthetic practices. Hand-built,
+                under your name, never ours. No templates, no white-label
+                shells.
               </p>
               <p>
-                Your practice lives right on their phone. They get a
-                heads-up when something opens up, a note from you, a
-                reason to come back. They feel taken care of, and you see
-                it in more rebooks, more referrals, and a clientele that
-                actually feels connected to your brand.
+                An app brings your brand right onto your clients&apos;
+                phones. A note when something opens. A reason to come
+                back. More rebooks, more referrals, and a clientele that
+                feels even closer to the brand they already love.
               </p>
-              <p>
-                That&apos;s why we built Darter. To help the best
-                practices stay close to the people they take care of.
-              </p>
+              <p>That&apos;s why we built Darter.</p>
               <p className="text-base text-text-muted">
                 David &amp; Carter
               </p>
