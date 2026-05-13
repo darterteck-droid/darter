@@ -25,40 +25,28 @@ export default function Founders() {
 
           {/* Story */}
           <AnimateOnScroll delay={0.15}>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-              The Founders
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-              A relationship worth more than the booking.
+            <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+              The Founders.
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                We started Darter after noticing the same gap in every
-                practice we admired. They had the rooms, the clientele, the
-                taste, the waiting list — and then a patient walked out, and
-                the relationship effectively paused until the next
-                appointment on the calendar.
+                We kept noticing the same thing with the practices we spoke
+                with. They had the clientele, they had the beautiful rooms,
+                they had the taste, but when the patient walked out, their
+                relationship went quiet. A mobile app fixes that.
               </p>
               <p>
-                A mobile app changes that. Your house on the home screen of
-                the people who already love it. A discreet note the moment
-                something opens. A standing record of every visit. A reason
-                to come back, kept in the place they spend their day.
+                Your practice on the home screen of the people who already
+                love you. A note the moment something opens. Higher
+                rebooks, real referral, and a patient who feels known
+                between visits.
               </p>
               <p>
-                The numbers follow — higher rebooks, higher tickets, real
-                referral — but the part worth building is what it does to
-                the patient. They feel known. The practice gets to be
-                present between visits, the way only the very best brands
-                manage to be.
-              </p>
-              <p>
-                We built Darter to look and feel the way those practices
-                look and feel. Hand-built. One at a time. Composed, not
-                assembled.
+                That&apos;s why we built Darter. To help the best practices
+                stay close to the people they take care of.
               </p>
               <p className="text-base text-text-muted">
-                — David &amp; Carter
+                David &amp; Carter
               </p>
             </div>
             <div className="mt-8 h-px bg-gradient-to-r from-accent-400/40 to-transparent" />
