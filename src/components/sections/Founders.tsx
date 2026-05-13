@@ -29,22 +29,33 @@ export default function Founders() {
               The Founders
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-              Builders, by trade.
+              A relationship worth more than the booking.
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                Darter began in voice AI for aesthetic practices. Time in the
-                field reset our thinking. The finest practices already answer
-                the phone; what they were missing — what their patients kept
-                asking for — was a way to live inside the relationship
-                between visits.
+                We started Darter after noticing the same gap in every
+                practice we admired. They had the rooms, the clientele, the
+                taste, the waiting list — and then a patient walked out, and
+                the relationship effectively paused until the next
+                appointment on the calendar.
               </p>
               <p>
-                So we narrowed the work. Today, Darter hand-builds native iOS
-                and Android apps for a small number of practices each quarter.
-                No templates. No white-label shells. Each one ships under your
-                name, with the booking, push, membership, and referral
-                machinery quietly attended to.
+                A mobile app changes that. Your house on the home screen of
+                the people who already love it. A discreet note the moment
+                something opens. A standing record of every visit. A reason
+                to come back, kept in the place they spend their day.
+              </p>
+              <p>
+                The numbers follow — higher rebooks, higher tickets, real
+                referral — but the part worth building is what it does to
+                the patient. They feel known. The practice gets to be
+                present between visits, the way only the very best brands
+                manage to be.
+              </p>
+              <p>
+                We built Darter to look and feel the way those practices
+                look and feel. Hand-built. One at a time. Composed, not
+                assembled.
               </p>
               <p className="text-base text-text-muted">
                 — David &amp; Carter
