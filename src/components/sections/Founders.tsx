@@ -9,12 +9,12 @@ export default function Founders() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           {/* Photo */}
           <AnimateOnScroll>
-            <div className="relative mx-auto w-full max-w-md">
+            <div className="relative mx-auto w-full max-w-lg">
               <div className="absolute -inset-4 rounded-3xl bg-accent-200/40 blur-2xl" />
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface-sunken shadow-[0_24px_60px_-30px_rgba(26,22,19,0.25)]">
+              <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-border bg-surface-sunken shadow-[0_24px_60px_-30px_rgba(26,22,19,0.25)]">
                 <Image
                   src="/founders.jpg"
-                  alt="David and Carter, co-founders of Darter, working in the studio"
+                  alt="David and Carter, co-founders of Darter"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
