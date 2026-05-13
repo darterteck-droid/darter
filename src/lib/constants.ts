@@ -14,19 +14,19 @@ export const DEMO_URL = "https://cal.com/darter-oi0epj/30min";
 
 export const NAV_LINKS = [
   { label: "Platform", href: "#features" },
-  { label: "The Work", href: "#showcase" },
   { label: "Engagement", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Founders", href: "#founders" },
 ];
 
 /**
- * STORE_LINKS — until Beauty Co. apps are live in the stores, both badges point to
- * the in-page showcase anchor. Swap to real store URLs once available.
+ * STORE_LINKS — until Beauty Co. apps are live in the stores, both badges
+ * point to the Platform section so visitors land on the app's feature
+ * surface. Swap to real store URLs once available.
  */
 export const STORE_LINKS = {
-  appStore: "#showcase",
-  googlePlay: "#showcase",
+  appStore: "#features",
+  googlePlay: "#features",
 };
 
 /**

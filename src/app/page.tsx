@@ -1,7 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import TrustStrip from "@/components/sections/TrustStrip";
-import AppShowcase from "@/components/sections/AppShowcase";
 import Features from "@/components/sections/Features";
 import AppValueCalculator from "@/components/sections/AppValueCalculator";
 import Founders from "@/components/sections/Founders";
@@ -16,7 +15,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustStrip />
-      <AppShowcase />
       <Features />
       <AppValueCalculator />
       <Founders />

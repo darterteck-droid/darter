@@ -94,7 +94,6 @@ function ComplianceBadges() {
 
 const footerLinks = {
   Product: [
-    { label: "The Work", href: "#showcase" },
     { label: "Platform", href: "#features" },
     { label: "Engagement", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
