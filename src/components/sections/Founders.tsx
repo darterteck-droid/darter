@@ -26,24 +26,26 @@ export default function Founders() {
           {/* Story */}
           <AnimateOnScroll delay={0.15}>
             <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-              The Founders.
+              The Founders
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                We kept noticing the same thing with the practices we spoke
-                with. They had the clientele, they had the beautiful rooms,
-                they had the taste, but when the patient walked out, their
-                relationship went quiet. A mobile app fixes that.
+                We talked to a lot of aesthetic practices, and the same
+                thing kept coming up. Great clients. Beautiful spaces. A
+                real waiting list. But the moment a patient walked out,
+                the relationship basically went silent until the next
+                visit. A mobile app fixes that.
               </p>
               <p>
-                Your practice on the home screen of the people who already
-                love you. A note the moment something opens. Higher
-                rebooks, real referral, and a patient who feels known
-                between visits.
+                Your practice lives right on their phone. They get a
+                heads-up when something opens up, a note from you, a
+                reason to come back. They feel taken care of, and you see
+                it in more rebooks, more referrals, and a clientele that
+                actually feels connected to your brand.
               </p>
               <p>
-                That&apos;s why we built Darter. To help the best practices
-                stay close to the people they take care of.
+                That&apos;s why we built Darter. To help the best
+                practices stay close to the people they take care of.
               </p>
               <p className="text-base text-text-muted">
                 David &amp; Carter
