@@ -12,14 +12,14 @@ export default function AppShowcase() {
       <AnimateOnScroll>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-            Showcase
+            The Work
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            A patient experience worthy of your brand.
+            A patient experience worthy of your name.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            Every screen, every interaction — hand-built for one practice. Here
-            are a few moments from the app we&apos;re shipping for Beauty Co.
+            Every screen considered. A few moments from a recent build for
+            Beauty Co.
           </p>
         </div>
       </AnimateOnScroll>
@@ -52,7 +52,7 @@ export default function AppShowcase() {
         </div>
 
         <p className="mt-4 text-center text-xs uppercase tracking-[0.2em] text-text-muted lg:hidden">
-          Swipe to explore
+          Swipe
         </p>
       </div>
     </SectionWrapper>

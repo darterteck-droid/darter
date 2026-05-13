@@ -5,14 +5,14 @@ import Button from "@/components/ui/Button";
 import { DEMO_URL } from "@/lib/constants";
 
 const INCLUDED = [
-  "Custom design system, built around your brand",
-  "Native iOS and Android, hand-coded — no templates",
-  "App Store and Google Play submission, under our developer accounts",
-  "Push notification infrastructure, with practice-side controls",
-  "Loyalty, rewards, and built-in referral program",
-  "Booking integration with your existing PMS",
-  "Ongoing OS, security, and feature updates",
-  "White-glove launch, team training, and patient activation playbook",
+  "A bespoke design system, composed around your house",
+  "Native iOS and Android, hand-coded — never a template",
+  "Submission to the App Store and Google Play, under our developer accounts",
+  "Push infrastructure, with quiet, practice-side controls",
+  "Membership, recognition, and a built-in referral programme",
+  "Reservation sync with the PMS your practice already runs on",
+  "Ongoing OS, security, and refinement releases",
+  "White-glove launch, team training, and a patient activation playbook",
 ];
 
 export default function Pricing() {
@@ -21,14 +21,14 @@ export default function Pricing() {
       <AnimateOnScroll>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-            Investment
+            Engagement
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Pricing built around your practice.
+            A single, considered engagement.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            A one-time setup investment, plus an ongoing maintenance plan. Both
-            scale to your practice size and the features your patients need.
+            A one-time build. Ongoing stewardship. Both calibrated to the
+            scale of your practice and the standard it requires.
           </p>
         </div>
       </AnimateOnScroll>
@@ -44,12 +44,12 @@ export default function Pricing() {
                 The Darter Build
               </p>
               <h3 className="mt-2 text-2xl font-bold text-text-primary sm:text-3xl">
-                One investment. One app. One partner.
+                One engagement. One app. One partner.
               </h3>
               <p className="mt-3 max-w-xl text-text-secondary">
-                Every Darter build includes everything below. Pricing is
-                tailored to your practice size and any custom features we add
-                on top.
+                Every Darter build includes the work below. Pricing reflects
+                the scale of your practice and any bespoke work composed on
+                top.
               </p>
             </div>
 
@@ -68,11 +68,11 @@ export default function Pricing() {
 
             <div className="mt-10 flex flex-col items-center gap-3">
               <Button href={DEMO_URL} size="lg">
-                Book a Demo for Pricing
+                Request an Introduction
               </Button>
               <p className="text-xs text-text-muted">
-                30-minute call. No obligation. We&apos;ll send a tailored
-                proposal within 48 hours.
+                A thirty-minute conversation. No obligation. A tailored
+                proposal follows within forty-eight hours.
               </p>
             </div>
           </div>

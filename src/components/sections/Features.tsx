@@ -12,11 +12,11 @@ export default function Features() {
             The Platform
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Everything a modern aesthetic brand needs in their patients&apos; hands.
+            Considered details. Every one of them.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            Booking. Push. Loyalty. Referrals. The patient-facing layer your
-            practice has been missing — designed and built around your brand.
+            Booking. Direct reach. Membership. Referral. Composed quietly
+            into a single app, under your name.
           </p>
         </div>
       </AnimateOnScroll>

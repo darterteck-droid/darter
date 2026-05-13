@@ -26,25 +26,25 @@ export default function Founders() {
           {/* Story */}
           <AnimateOnScroll delay={0.15}>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-              Meet the Founders
+              The Founders
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-              We&apos;re builders, first.
+              Builders, by trade.
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                We started Darter building voice AI for aesthetic clinics. What
-                we learned in the field reset our thinking: the best practices
-                already pick up the phone. What they don&apos;t have — what
-                their patients keep asking for — is a way to live inside the
-                relationship between visits.
+                Darter began in voice AI for aesthetic practices. Time in the
+                field reset our thinking. The finest practices already answer
+                the phone; what they were missing — what their patients kept
+                asking for — was a way to live inside the relationship
+                between visits.
               </p>
               <p>
-                So we pivoted. Today we hand-build native iOS and Android apps
-                for a small number of MedSpas every quarter. No templates, no
-                white-label shells. Each one ships to the App Store and Google
-                Play under your name, with the booking, push, loyalty, and
-                referral plumbing handled for you.
+                So we narrowed the work. Today, Darter hand-builds native iOS
+                and Android apps for a small number of practices each quarter.
+                No templates. No white-label shells. Each one ships under your
+                name, with the booking, push, membership, and referral
+                machinery quietly attended to.
               </p>
               <p className="text-base text-text-muted">
                 — David &amp; Carter

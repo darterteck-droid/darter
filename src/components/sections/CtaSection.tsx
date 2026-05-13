@@ -13,21 +13,21 @@ export default function CtaSection() {
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6">
         <AnimateOnScroll>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-            Get Started
+            Begin
           </p>
           <h2 className="mt-4 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Ready to put your practice{" "}
+            Quietly considered.{" "}
             <span className="bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text text-transparent">
-              in their pocket?
+              Ready when your practice is.
             </span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-text-secondary">
-            6&ndash;10 weeks from kickoff to launch in both stores. Built by
-            hand. Ready when your patients are.
+            Six to ten weeks from kickoff to launch in both stores. Built by
+            hand. Composed for one practice at a time.
           </p>
           <div className="mt-10 flex flex-col items-center gap-6">
             <Button href={DEMO_URL} size="lg">
-              Book a Demo &rarr;
+              Request an Introduction &rarr;
             </Button>
             <StoreBadges variant="cta" />
           </div>

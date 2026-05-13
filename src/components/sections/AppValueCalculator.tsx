@@ -97,15 +97,15 @@ export default function AppValueCalculator() {
       <AnimateOnScroll>
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-            What an app is worth
+            The Math
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Move three numbers. See what a real app does to your practice.
+            Three numbers. What an app of this caliber returns.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            A conservative estimate of the monthly revenue and valuation lift
-            from your own branded app — based on industry benchmarks for push
-            engagement, loyalty spend, and aesthetic-patient rebooking.
+            A conservative read of monthly revenue and valuation lift —
+            grounded in industry benchmarks for push engagement, loyalty
+            spend, and aesthetic rebooking.
           </p>
         </div>
       </AnimateOnScroll>
@@ -180,7 +180,7 @@ export default function AppValueCalculator() {
                 variant="primary"
                 className="w-full justify-center"
               >
-                Book a Demo for Pricing
+                Begin a Conversation
               </Button>
             </div>
           </div>
@@ -191,10 +191,10 @@ export default function AppValueCalculator() {
         Lift estimates use a +{D.rebookLiftPoints}pp rebook lift from push +
         in-app booking (midpoint of Airship/Localytics retail-app benchmarks),
         +{Math.round(D.ticketLift * 100)}% ticket lift from loyalty/upsell
-        (conservative read of Bond Brand Loyalty engaged-member spend), and +
-        {Math.round(D.referralLift * 100)}% annual active-patient growth via
-        in-app referrals. Your results will vary — book a demo for a tailored
-        projection.
+        (a conservative read of Bond Brand Loyalty engaged-member spend), and
+        +{Math.round(D.referralLift * 100)}% annual active-patient growth
+        through in-app referral. Results vary — a tailored projection is
+        prepared for each practice.
       </p>
     </SectionWrapper>
   );

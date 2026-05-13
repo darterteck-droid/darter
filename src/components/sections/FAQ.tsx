@@ -9,30 +9,30 @@ import { DEMO_URL } from "@/lib/constants";
 
 const faqs = [
   {
-    question: "Is this a template, or a real native app?",
+    question: "Is this a template, or a true native app?",
     answer:
-      "A real native app — built per practice, published in the App Store and Google Play under your brand. Not a PWA, not a wrapper, not a multi-tenant 'select your practice' setup. Your patients tap your icon, see your name, and never know Darter exists.",
+      "A true native app — built for one practice, published in the App Store and Google Play under your name. Not a PWA, not a wrapper, not a 'select your location' shell. Your patients tap your icon, see your name, and never know Darter exists.",
   },
   {
-    question: "How long does it take to launch?",
+    question: "What is the timeline?",
     answer:
-      "Most builds run 6–10 weeks from kickoff, including App Store and Google Play review. We don't sell speed — we sell craft. The result is an app you'd actually want representing your brand on a patient's home screen.",
+      "Six to ten weeks from kickoff to launch in both stores, including review. We don't sell speed; we sell craft. The result is an app worth carrying your name on a patient's home screen.",
   },
   {
-    question: "Will my patients actually download it?",
+    question: "Will my patients use it?",
     answer:
-      "Yes, when the value is real. We design every launch around push, loyalty, and exclusive offers that give patients a concrete reason to install — and to keep coming back. Practices with engaged patient bases routinely see 40–60% of active patients install within the first 90 days.",
+      "Yes, when the experience is worthy of them. Every launch is composed around membership, direct access, and considered offers — concrete reasons to install, and to return. Practices with a strong patient base regularly see 40–60% of active patients install in the first ninety days.",
   },
   {
     question:
-      "How does this work with Boulevard, Mangomint, Zenoti, or my current PMS?",
+      "How does it work with Boulevard, Mangomint, Zenoti, or our current PMS?",
     answer:
-      "We sit on top of your existing platform. Bookings made in the app sync back to your system of record, so your front-desk workflow doesn't change. We're the patient-facing layer — not a replacement for the platform you already trust to run the business.",
+      "Darter sits alongside the platform you already trust. Reservations made in the app sync back to your system of record; the front-desk routine does not change. We are the patient-facing layer — not a replacement for the system that runs the house.",
   },
   {
-    question: "What does ongoing maintenance cover?",
+    question: "What does ongoing stewardship cover?",
     answer:
-      "iOS and Android OS updates, App Store and Play Store compliance, security patches, feature improvements, push campaign tools, and analytics. You're not buying a one-time deliverable — you're buying a partner who keeps the app working as the platforms evolve.",
+      "iOS and Android OS releases, App Store and Play Store compliance, security, feature refinements, push tooling, and analytics. You aren't buying a deliverable — you're retaining a partner who keeps the app at the standard your brand requires, year after year.",
   },
 ];
 
@@ -45,29 +45,29 @@ export default function FAQ() {
         {/* Left */}
         <AnimateOnScroll>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
-            FAQ
+            Considered Answers
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Answers to the questions every founder asks us.
+            The questions our clients ask first.
           </h2>
           <p className="mt-4 text-text-secondary">
-            What we build, how long it takes, and how it fits with the
-            platform you already use.
+            What we build. How it ships. Where it sits alongside the
+            systems your practice already runs on.
           </p>
 
           <div className="mt-8 rounded-2xl border border-border bg-surface p-6 shadow-[0_8px_24px_-12px_rgba(26,22,19,0.12)]">
             <p className="text-lg font-semibold text-accent-600">
-              Still have questions?
+              A conversation, then.
             </p>
             <p className="mt-2 text-sm text-text-secondary">
-              We&apos;ll walk through your practice, your patients, and the
+              Thirty quiet minutes. Your practice, your patients, and the
               shape of the app that fits.
             </p>
             <Link
               href={DEMO_URL}
               className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-accent-600 transition-colors hover:text-accent-500"
             >
-              Book a Demo
+              Request an Introduction
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

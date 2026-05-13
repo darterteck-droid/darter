@@ -94,9 +94,9 @@ function ComplianceBadges() {
 
 const footerLinks = {
   Product: [
-    { label: "Showcase", href: "#showcase" },
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "The Work", href: "#showcase" },
+    { label: "Platform", href: "#features" },
+    { label: "Engagement", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
   ],
   Legal: [
@@ -119,7 +119,8 @@ export default function Footer() {
             Darter
           </Link>
           <p className="mt-3 max-w-md text-sm text-text-secondary">
-            Custom-built mobile apps for the world&apos;s best MedSpas.
+            Bespoke mobile apps for a select group of the world&apos;s
+            leading aesthetic practices.
           </p>
 
           {/* Store badges row */}

@@ -28,7 +28,7 @@ export default function Hero() {
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-accent-300/60 bg-white/70 px-4 py-1.5 text-sm text-accent-600 backdrop-blur-sm shadow-sm">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
-                Custom-Built Apps for MedSpas
+                By selection. A small number of practices each year.
               </span>
             </motion.div>
 
@@ -40,7 +40,7 @@ export default function Hero() {
             >
               Your practice. In their pocket.
               <span className="mt-2 block bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text text-transparent">
-                Native iOS &amp; Android apps, built for you.
+                Bespoke iOS &amp; Android, built by hand.
               </span>
             </motion.h1>
 
@@ -50,10 +50,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.2 }}
             >
-              Darter designs and builds branded mobile apps for high-end
-              aesthetic practices. Push to your patients, take bookings around
-              the clock, and grow loyalty — all in an app that lives on their
-              home screen under your name.
+              Darter designs and builds native mobile apps for a select
+              group of the world&apos;s leading aesthetic practices. Quietly.
+              In your name. By selection only.
             </motion.p>
 
             <motion.div
@@ -63,10 +62,10 @@ export default function Hero() {
               transition={{ duration: 0.55, delay: 0.3 }}
             >
               <Button href={DEMO_URL} size="lg">
-                Book a Demo &rarr;
+                Request an Introduction &rarr;
               </Button>
               <Button href="#showcase" variant="ghost" size="lg">
-                See the App
+                View the Work
               </Button>
             </motion.div>
 

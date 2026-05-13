@@ -14,10 +14,10 @@ export const DEMO_URL = "https://cal.com/darter-oi0epj/30min";
 
 export const NAV_LINKS = [
   { label: "Platform", href: "#features" },
-  { label: "Showcase", href: "#showcase" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "The Work", href: "#showcase" },
+  { label: "Engagement", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-  { label: "About", href: "#founders" },
+  { label: "Founders", href: "#founders" },
 ];
 
 /**
@@ -36,81 +36,81 @@ export const STORE_LINKS = {
 export const STATS = [
   {
     stat: "73%",
-    label: "of patient bookings are now made on mobile",
+    label: "of patient bookings now happen on mobile",
     detail:
-      "If your booking lives only on a web page, you're losing the patients who never get past the App Store.",
+      "A web page is no longer where the relationship lives.",
   },
   {
     stat: "7x",
-    label: "higher open rates for push vs. SMS",
+    label: "higher open rates on push than SMS",
     detail:
-      "Push notifications cut through the noise. Fill a same-day cancellation in minutes.",
+      "A direct line to your patients. Quiet, immediate, on your terms.",
   },
   {
-    stat: "3-5x",
-    label: "valuation multiplier on engaged patient lift",
+    stat: "3–5x",
+    label: "valuation multiple on engaged-patient revenue",
     detail:
-      "When you grow recurring patient revenue, you don't just earn more — your practice is worth more.",
+      "Engagement compounds. The practice is worth more for it.",
   },
 ];
 
 export const STEPS = [
   {
     icon: Compass,
-    title: "Discovery",
+    title: "Conversation",
     description:
-      "We sit down with you to map your brand, your patient journey, and the features that matter for your practice.",
+      "We listen first. Your brand, your patients, the moments that matter — mapped before a line is drawn.",
   },
   {
     icon: Hammer,
-    title: "Design & Build",
+    title: "Composition",
     description:
-      "Hand-built native iOS and Android, designed around your brand. Booking, push, loyalty, referrals — all wired in.",
+      "Native iOS and Android, hand-built around your house. Booking, push, loyalty, referrals — composed, not assembled.",
   },
   {
     icon: Rocket,
-    title: "Launch & Maintain",
+    title: "Stewardship",
     description:
-      "We ship to the App Store and Google Play under your name, then handle every OS update, store compliance change, and feature ship that follows.",
+      "Shipped under your name. Maintained for the life of the app — every OS release, every store change, every refinement.",
   },
 ];
 
 export const FEATURES = [
   {
     icon: Smartphone,
-    title: "Native iOS + Android",
+    title: "Native iOS and Android",
     description:
-      "Published under your brand in both stores. Not a template, not a web wrapper — actual native apps your patients keep on their home screen.",
+      "Published in both stores under your name. Not a template, not a wrapper — a native app your patients keep on their home screen.",
   },
   {
     icon: CalendarCheck,
-    title: "In-App Booking & Rescheduling",
+    title: "Booking, In the App",
     description:
-      "Real-time availability, deposits, reminders. The booking lives in your app, not on someone else's portal.",
+      "Real-time availability, deposits, reminders. Reservations made in your house, not on someone else's portal.",
   },
   {
     icon: Bell,
-    title: "Push Notifications & Promos",
+    title: "A Direct Line",
     description:
-      "Reach every patient instantly when a slot opens, a promo drops, or you need to fill the day. Open rates SMS can't touch.",
+      "A quiet, immediate channel from the practice to every patient. A discreet release. A held appointment. Reached without friction.",
   },
   {
     icon: Sparkles,
-    title: "Loyalty & Rewards",
+    title: "Loyalty, Reconsidered",
     description:
-      "Points, tiers, in-app currency. Designed around how aesthetic patients actually rebook — not retrofitted from retail.",
+      "Tiers, perks, in-app credit — designed around the rhythm of aesthetic patients, not retrofitted from retail.",
   },
   {
     icon: Heart,
-    title: "Built-In Referrals",
+    title: "Referral, Built In",
     description:
-      "Patients refer friends with a tap. Both sides get rewarded. Tracked, redeemable, painless.",
+      "Your patients introduce friends in a single tap. Both sides recognised. Tracked, redeemable, effortless.",
   },
   {
     icon: Palette,
-    title: "Your Brand In Their Pocket",
+    title: "Resident on the Home Screen",
     description:
-      "Logo on the home screen. App icon they tap by name. Brand presence no third-party portal can give you.",
+      "Your mark on their device. Your icon, tapped by name. A presence no third-party portal can offer.",
   },
 ];
 
@@ -122,37 +122,37 @@ export const SHOWCASE_SCREENS = [
   {
     src: "/showcase/beauty-co-1-welcome.png",
     alt: "Beauty Co. app home screen welcoming Sarah with reward unlocked and Beauty Co+ membership",
-    caption: "A home screen that picks up where the last visit left off.",
+    caption: "A welcome that picks up where the last visit left off.",
   },
   {
     src: "/showcase/beauty-co-2-services.png",
     alt: "Beauty Co. recommended services grid: Botox, Dermal Fillers, BeautyCo facial, HydraFacial",
     caption:
-      "A curated treatment menu — your services, your photography, your brand.",
+      "A considered menu — your treatments, your photography, your mark.",
   },
   {
     src: "/showcase/beauty-co-3-rewards.png",
     alt: "Beauty Co. rewards detail screen with how-to-earn points list",
     caption:
-      "Loyalty that drives real rebooking — points, perks, and clinic cash.",
+      "A membership that rewards a return — perks, credit, and quiet recognition.",
   },
   {
     src: "/showcase/beauty-co-4-messages.png",
     alt: "Beauty Co. messages thread with Kelly, the practice's founder/owner",
     caption:
-      "A direct line from owner to patient. Personal, on-brand, always-on.",
+      "A private line, founder to patient. Personal. On the house.",
   },
   {
     src: "/showcase/beauty-co-5-offers.png",
     alt: "Beauty Co. offers screen with priority booking pass and discount",
     caption:
-      "Time-limited offers and priority booking, delivered in one push.",
+      "Discreet releases. Priority access. Held for those who belong.",
   },
   {
     src: "/showcase/beauty-co-6-profile.png",
     alt: "Beauty Co. patient profile showing visits, points, and savings",
     caption:
-      "Patient identity in your brand — visits, points, savings, all on their phone.",
+      "A standing record — visits, status, recognition — kept in your name.",
   },
 ];
 
