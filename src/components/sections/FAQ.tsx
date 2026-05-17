@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "What is the timeline?",
     answer:
-      "Six to ten weeks from kickoff to a live app in both stores, store reviews included. We don't sell speed. We sell craft. The result is an app worth carrying your name on a patient's home screen.",
+      "Two to four weeks from kickoff to a live app in both stores, store reviews included. Fast, but not rushed. The result is an app worth carrying your name on a patient's home screen.",
   },
   {
     question: "Will my patients actually use it?",
