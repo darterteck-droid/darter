@@ -118,8 +118,8 @@ export default function Footer() {
             Darter
           </Link>
           <p className="mt-3 max-w-md text-sm text-text-secondary">
-            Bespoke mobile apps for a select group of the world&apos;s
-            leading aesthetic practices.
+            Bespoke mobile apps for the world&apos;s best-run aesthetic
+            practices.
           </p>
 
           {/* Store badges row */}

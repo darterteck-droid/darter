@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { animate, motion, useMotionValue, useTransform } from "motion/react";
 import { TrendingUp, BadgeDollarSign } from "lucide-react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
@@ -13,6 +14,24 @@ function formatMoney(n: number): string {
   if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)}M`;
   if (n >= 10_000) return `$${Math.round(n / 1000)}k`;
   return `$${Math.round(n).toLocaleString("en-US")}`;
+}
+
+/**
+ * AnimatedMoney: tweens the displayed number toward `value` whenever it
+ * changes. Gives the calculator a "smooth" feel instead of a jumpy
+ * recalculation every slider tick.
+ */
+function AnimatedMoney({ value }: { value: number }) {
+  const mv = useMotionValue(0);
+  const display = useTransform(mv, (latest) => formatMoney(latest));
+  useEffect(() => {
+    const controls = animate(mv, value, {
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1],
+    });
+    return () => controls.stop();
+  }, [value, mv]);
+  return <motion.span className="tabular-nums">{display}</motion.span>;
 }
 
 function Slider({
@@ -100,12 +119,12 @@ export default function AppValueCalculator() {
             The Math
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Three numbers. What an app of this caliber returns.
+            Three numbers. The new revenue an app unlocks.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            A conservative read of monthly revenue and valuation lift —
-            grounded in industry benchmarks for push engagement, loyalty
-            spend, and aesthetic rebooking.
+            A conservative read of monthly revenue lift and the extra
+            valuation it creates. Grounded in published benchmarks for
+            push engagement, loyalty spend, and aesthetic rebooking.
           </p>
         </div>
       </AnimateOnScroll>
@@ -152,7 +171,7 @@ export default function AppValueCalculator() {
                 </p>
               </div>
               <p className="mt-3 bg-gradient-to-r from-accent-500 to-accent-600 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl tabular-nums">
-                +{formatMoney(monthlyLift)}
+                +<AnimatedMoney value={monthlyLift} />
                 <span className="ml-1 text-lg font-medium text-text-muted">
                   / month
                 </span>
@@ -167,7 +186,7 @@ export default function AppValueCalculator() {
                 </p>
               </div>
               <p className="mt-3 bg-gradient-to-r from-accent-500 to-accent-600 bg-clip-text text-4xl font-bold text-transparent sm:text-5xl tabular-nums">
-                +{formatMoney(valuationLift)}
+                +<AnimatedMoney value={valuationLift} />
               </p>
               <p className="mt-1 text-xs text-text-muted">
                 Illustrative {D.valuationMultiple}× multiple on annualized
@@ -180,7 +199,7 @@ export default function AppValueCalculator() {
                 variant="primary"
                 className="w-full justify-center"
               >
-                Begin a Conversation
+                Book a 30-min Call
               </Button>
             </div>
           </div>
@@ -188,13 +207,13 @@ export default function AppValueCalculator() {
       </AnimateOnScroll>
 
       <p className="mx-auto mt-8 max-w-3xl text-center text-xs text-text-muted">
-        Lift estimates use a +{D.rebookLiftPoints}pp rebook lift from push +
-        in-app booking (midpoint of Airship/Localytics retail-app benchmarks),
-        +{Math.round(D.ticketLift * 100)}% ticket lift from loyalty/upsell
-        (a conservative read of Bond Brand Loyalty engaged-member spend), and
-        +{Math.round(D.referralLift * 100)}% annual active-patient growth
-        through in-app referral. Results vary — a tailored projection is
-        prepared for each practice.
+        Lift estimates use a +{D.rebookLiftPoints}pp rebook lift from push and
+        in-app booking (midpoint of Airship and Localytics retail-app
+        benchmarks), +{Math.round(D.ticketLift * 100)}% ticket lift from
+        loyalty and upsell (a conservative read of Bond Brand Loyalty
+        engaged-member spend), and +{Math.round(D.referralLift * 100)}%
+        annual active-patient growth through in-app referral. Results vary.
+        We&apos;ll prepare a tailored projection for your practice on the call.
       </p>
     </SectionWrapper>
   );

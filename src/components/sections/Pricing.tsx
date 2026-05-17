@@ -5,12 +5,12 @@ import Button from "@/components/ui/Button";
 import { DEMO_URL } from "@/lib/constants";
 
 const INCLUDED = [
-  "A bespoke design system, composed around your house",
-  "Native iOS and Android, hand-coded — never a template",
-  "Submission to the App Store and Google Play, under our developer accounts",
-  "Push infrastructure, with quiet, practice-side controls",
-  "Membership, recognition, and a built-in referral programme",
-  "Reservation sync with the PMS your practice already runs on",
+  "A bespoke design system, built around your brand",
+  "Native iOS and Android, hand-coded, never a template",
+  "Submission to the App Store and Google Play under our developer accounts",
+  "Push infrastructure, with quiet practice-side controls",
+  "Membership, recognition, and a built-in referral program",
+  "Reservation sync with the PMS your practice already runs",
   "Ongoing OS, security, and refinement releases",
   "White-glove launch, team training, and a patient activation playbook",
 ];
@@ -24,10 +24,10 @@ export default function Pricing() {
             Engagement
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            A single, considered engagement.
+            One engagement. Everything included.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            A one-time build. Ongoing stewardship. Both calibrated to the
+            A one-time build, then ongoing stewardship. Both priced to the
             scale of your practice and the standard it requires.
           </p>
         </div>
@@ -47,9 +47,9 @@ export default function Pricing() {
                 One engagement. One app. One partner.
               </h3>
               <p className="mt-3 max-w-xl text-text-secondary">
-                Every Darter build includes the work below. Pricing reflects
-                the scale of your practice and any bespoke work composed on
-                top.
+                Every Darter build includes the work below. Pricing scales
+                with the size of your practice and any bespoke work added
+                on top.
               </p>
             </div>
 
@@ -68,11 +68,11 @@ export default function Pricing() {
 
             <div className="mt-10 flex flex-col items-center gap-3">
               <Button href={DEMO_URL} size="lg">
-                Request an Introduction
+                Book a 30-min Call
               </Button>
               <p className="text-xs text-text-muted">
-                A thirty-minute conversation. No obligation. A tailored
-                proposal follows within forty-eight hours.
+                Thirty minutes on the phone. No obligation. A tailored
+                proposal in your inbox within 48 hours.
               </p>
             </div>
           </div>

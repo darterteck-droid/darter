@@ -11,7 +11,7 @@ type PhoneFrameProps = {
 };
 
 /**
- * PhoneFrame — pure CSS iPhone-style bezel. Wraps a screen capture in a
+ * PhoneFrame: pure CSS iPhone-style bezel. Wraps a screen capture in a
  * rounded device shell with a Dynamic Island notch. Sized via a Tailwind width
  * utility so the same component works in the Hero (large) and AppShowcase
  * (small) without conditional logic.

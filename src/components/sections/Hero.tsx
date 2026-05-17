@@ -27,8 +27,11 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-flex items-center gap-2 rounded-full border border-accent-300/60 bg-white/70 px-4 py-1.5 text-sm text-accent-600 backdrop-blur-sm shadow-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
-                By selection. A small number of practices each year.
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-500 opacity-60" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-500" />
+                </span>
+                Taking a small number of practices for 2026.
               </span>
             </motion.div>
 
@@ -40,7 +43,7 @@ export default function Hero() {
             >
               Your practice. In their pocket.
               <span className="mt-2 block bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text text-transparent">
-                Bespoke iOS &amp; Android, built by hand.
+                A native app, built by hand.
               </span>
             </motion.h1>
 
@@ -50,9 +53,10 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.2 }}
             >
-              Darter designs and builds native mobile apps for a select
-              group of the world&apos;s leading aesthetic practices. Quietly.
-              In your name. By selection only.
+              We build iOS and Android apps for the world&apos;s
+              best-run aesthetic practices. Published under your name.
+              Designed to bring more patients back, more often, on
+              autopilot.
             </motion.p>
 
             <motion.div
@@ -62,10 +66,10 @@ export default function Hero() {
               transition={{ duration: 0.55, delay: 0.3 }}
             >
               <Button href={DEMO_URL} size="lg">
-                Request an Introduction &rarr;
+                Book a 30-min Call &rarr;
               </Button>
-              <Button href="#showcase" variant="ghost" size="lg">
-                View the Work
+              <Button href="#value" variant="ghost" size="lg">
+                See the Numbers
               </Button>
             </motion.div>
 

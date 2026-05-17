@@ -6,7 +6,7 @@ import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import PhoneFrame from "@/components/ui/PhoneFrame";
 import { SHOWCASE_SCREENS } from "@/lib/constants";
 
-// Skip the first screen — it's already featured in the Hero.
+// Skip the first screen: it's already featured in the Hero.
 const screens = SHOWCASE_SCREENS.slice(1);
 
 function Header() {
@@ -27,7 +27,7 @@ function Header() {
 }
 
 /**
- * DesktopPinnedScroll — the section sticks to the viewport while the
+ * DesktopPinnedScroll: the section sticks to the viewport while the
  * caller scrolls down; that vertical scroll drives the phone row sideways.
  * Once the row has traveled its full distance, vertical scroll resumes.
  *
@@ -100,7 +100,7 @@ function DesktopPinnedScroll() {
 }
 
 /**
- * MobileSwipeScroll — touch devices keep the original swipeable
+ * MobileSwipeScroll: touch devices keep the original swipeable
  * scroll-snap row. Pinned vertical-to-horizontal scroll feels janky on
  * touch because the gesture and the scroll model fight each other.
  */

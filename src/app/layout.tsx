@@ -7,9 +7,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const TITLE = "Darter — Native apps for the world's leading aesthetic practices.";
+const TITLE = "Darter | Native apps for the world's leading aesthetic practices.";
 const DESCRIPTION =
-  "Darter designs and builds bespoke iOS and Android apps for a small number of aesthetic practices each year. By selection.";
+  "Darter designs and builds bespoke iOS and Android apps for the world's best-run aesthetic practices. Hand-built, published under your name.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dartertech.com"),

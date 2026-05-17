@@ -20,7 +20,7 @@ export const NAV_LINKS = [
 ];
 
 /**
- * STORE_LINKS — until Beauty Co. apps are live in the stores, both badges
+ * STORE_LINKS: until Beauty Co. apps are live in the stores, both badges
  * point to the Platform section so visitors land on the app's feature
  * surface. Swap to real store URLs once available.
  */
@@ -59,19 +59,19 @@ export const STEPS = [
     icon: Compass,
     title: "Conversation",
     description:
-      "We listen first. Your brand, your patients, the moments that matter — mapped before a line is drawn.",
+      "We start by listening. Your brand, your patients, the moments that matter. Mapped before a single screen is drawn.",
   },
   {
     icon: Hammer,
     title: "Composition",
     description:
-      "Native iOS and Android, hand-built around your house. Booking, push, loyalty, referrals — composed, not assembled.",
+      "Native iOS and Android, hand-built for one practice at a time. Booking, push, loyalty, referrals, composed into a single house.",
   },
   {
     icon: Rocket,
     title: "Stewardship",
     description:
-      "Shipped under your name. Maintained for the life of the app — every OS release, every store change, every refinement.",
+      "Shipped under your name. Looked after for the life of the app, through every OS release and every store change.",
   },
 ];
 
@@ -80,7 +80,7 @@ export const FEATURES = [
     icon: Smartphone,
     title: "Native iOS and Android",
     description:
-      "Published in both stores under your name. Not a template, not a wrapper — a native app your patients keep on their home screen.",
+      "Published in both stores under your name. Not a template, not a wrapper. A real native app your patients keep on their home screen.",
   },
   {
     icon: CalendarCheck,
@@ -92,13 +92,13 @@ export const FEATURES = [
     icon: Bell,
     title: "A Direct Line",
     description:
-      "A quiet, immediate channel from the practice to every patient. A discreet release. A held appointment. Reached without friction.",
+      "A quiet, immediate channel from the practice to every patient. A new release. A held appointment. Reached in seconds, not days.",
   },
   {
     icon: Sparkles,
     title: "Loyalty, Reconsidered",
     description:
-      "Tiers, perks, in-app credit — designed around the rhythm of aesthetic patients, not retrofitted from retail.",
+      "Tiers, perks, in-app credit, designed around the rhythm of aesthetic patients, not retrofitted from a coffee app.",
   },
   {
     icon: Heart,
@@ -115,7 +115,7 @@ export const FEATURES = [
 ];
 
 /**
- * SHOWCASE_SCREENS — Beauty Co. app screens, cropped to clean phone screens and wrapped
+ * SHOWCASE_SCREENS: Beauty Co. app screens, cropped to clean phone screens and wrapped
  * in <PhoneFrame /> on render. The first entry is reused as the Hero phone.
  */
 export const SHOWCASE_SCREENS = [
@@ -128,13 +128,13 @@ export const SHOWCASE_SCREENS = [
     src: "/showcase/beauty-co-2-services.png",
     alt: "Beauty Co. recommended services grid: Botox, Dermal Fillers, BeautyCo facial, HydraFacial",
     caption:
-      "A considered menu — your treatments, your photography, your mark.",
+      "A considered menu. Your treatments, your photography, your mark.",
   },
   {
     src: "/showcase/beauty-co-3-rewards.png",
     alt: "Beauty Co. rewards detail screen with how-to-earn points list",
     caption:
-      "A membership that rewards a return — perks, credit, and quiet recognition.",
+      "A membership that rewards a return. Perks, credit, and quiet recognition.",
   },
   {
     src: "/showcase/beauty-co-4-messages.png",
@@ -152,12 +152,12 @@ export const SHOWCASE_SCREENS = [
     src: "/showcase/beauty-co-6-profile.png",
     alt: "Beauty Co. patient profile showing visits, points, and savings",
     caption:
-      "A standing record — visits, status, recognition — kept in your name.",
+      "A standing record. Visits, status, recognition, kept in your name.",
   },
 ];
 
 /**
- * APP_VALUE_DEFAULTS — single source of truth for the AppValueCalculator math.
+ * APP_VALUE_DEFAULTS: single source of truth for the AppValueCalculator math.
  * Lift assumptions are conservative midpoints of public industry benchmarks
  * (Airship push engagement; Bond Brand Loyalty engaged-member spend lift;
  * typical PE/M&A multiples on recurring-revenue lift in aesthetics).
@@ -175,7 +175,7 @@ export const APP_VALUE_DEFAULTS = {
   currentRebookRateMin: 5,
   currentRebookRateMax: 80,
 
-  monthlyVisitsPerActive: 0.6, // constant — average aesthetic-visit cadence
+  monthlyVisitsPerActive: 0.6, // constant: average aesthetic-visit cadence
   rebookLiftPoints: 12,        // +12 pp from app push + in-app booking
   ticketLift: 0.08,            // +8% from loyalty/upsell prompts
   referralLift: 0.05,          // +5% new active patients/year

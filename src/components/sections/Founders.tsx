@@ -25,24 +25,31 @@ export default function Founders() {
 
           {/* Story */}
           <AnimateOnScroll delay={0.15}>
-            <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent-600">
               The Founders
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+              Hi. We&apos;re David and Carter.
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-text-secondary">
               <p>
-                We started Darter to build native mobile apps for the
-                world&apos;s leading aesthetic practices. Hand-built,
-                under your name, never ours. No templates, no white-label
-                shells.
+                We build the iOS and Android apps for some of the
+                best-run aesthetic practices in the country. Hand-built,
+                published under your name, never ours.
               </p>
               <p>
-                An app brings your brand right onto your clients&apos;
-                phones. A note when something opens. A reason to come
-                back. More rebooks, more referrals, and a clientele that
-                feels even closer to the brand they already love.
+                The idea was simple. The clinics we love already have
+                the brand, the patients, and the waitlist. What they
+                don&apos;t have is a real home on the phone their
+                patients actually live on. So we build them one.
               </p>
-              <p>That&apos;s why we built Darter.</p>
-              <p className="text-base text-text-muted">
+              <p>
+                An app on the home screen quietly does the work a
+                website can&apos;t. Patients rebook in two taps.
+                Friends are invited with one. Your name sits next to
+                Instagram and Apple Wallet, where it belongs in 2026.
+              </p>
+              <p className="text-base font-medium text-text-primary">
                 David &amp; Carter
               </p>
             </div>

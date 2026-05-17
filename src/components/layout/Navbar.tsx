@@ -46,7 +46,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Button href={DEMO_URL} size="sm">
-            Request an Introduction
+            Book a Call
           </Button>
         </div>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Button href={DEMO_URL} size="md" className="mt-2">
-              Request an Introduction
+              Book a Call
             </Button>
           </div>
         </div>

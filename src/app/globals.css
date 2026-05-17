@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Light, Apple-product-page palette — cream background, warm tan as accent only. */
+  /* Light, Apple-product-page palette. Cream background, warm tan as accent only. */
   --color-background: #FAF8F5;
   --color-surface: #FFFFFF;
   --color-surface-elevated: #FFFFFF;

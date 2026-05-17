@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Terms of Service | Darter",
   description:
-    "Darter Terms of Service — the agreement governing your use of Darter's custom-built mobile app development and hosting platform for aesthetic practices.",
+    "Darter Terms of Service. The agreement governing your use of Darter's custom-built mobile app development and hosting platform for aesthetic practices.",
 };
 
 export default function TermsOfServicePage() {
@@ -520,10 +520,10 @@ export default function TermsOfServicePage() {
             </ul>
             <p className="mt-4">
               Customer acknowledges that the Services rely on third-party
-              platforms — including the Apple App Store, Google Play, the
+              platforms, including the Apple App Store, Google Play, the
               Customer&rsquo;s existing practice management system, push
               notification gateways, and operating-system-level permissions
-              granted by patients — and that the availability, behavior, and
+              granted by patients, and that the availability, behavior, and
               policies of those platforms are outside Darter&rsquo;s control.
             </p>
 

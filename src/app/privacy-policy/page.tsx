@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "Privacy Policy | Darter",
   description:
-    "Darter Privacy Policy — learn how we collect, use, and protect your information.",
+    "Darter Privacy Policy. Learn how we collect, use, and protect your information.",
 };
 
 export default function PrivacyPolicyPage() {

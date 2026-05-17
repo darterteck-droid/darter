@@ -12,11 +12,11 @@ export default function Features() {
             The Platform
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-            Considered details. Every one of them.
+            Everything a 2026 practice should own.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            Booking. Direct reach. Membership. Referral. Composed quietly
-            into a single app, under your name.
+            Booking. Direct messaging. Membership. Referrals. All composed
+            into one quiet, beautiful app, published under your name.
           </p>
         </div>
       </AnimateOnScroll>
