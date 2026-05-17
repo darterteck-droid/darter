@@ -22,7 +22,7 @@ export default function CtaSection() {
             </span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-text-secondary">
-            Six to ten weeks from kickoff to live in both stores. Built by
+            Two to four weeks from kickoff to live in both stores. Built by
             hand, for one practice at a time.
           </p>
           <div className="mt-10 flex flex-col items-center gap-6">

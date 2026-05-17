@@ -41,9 +41,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.1 }}
             >
-              Your practice. In their pocket.
+              Custom mobile apps for aesthetic practices.
               <span className="mt-2 block bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text text-transparent">
-                A native app, built by hand.
+                Built to bring patients back and grow your revenue.
               </span>
             </motion.h1>
 
@@ -53,10 +53,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.2 }}
             >
-              We build iOS and Android apps for the world&apos;s
-              best-run aesthetic practices. Published under your name.
-              Designed to bring more patients back, more often, on
-              autopilot.
+              Hand-built native iOS and Android apps for aesthetic
+              clinics. Published under your name. Designed to bring more
+              patients back, more often.
             </motion.p>
 
             <motion.div
