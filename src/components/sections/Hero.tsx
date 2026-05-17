@@ -42,7 +42,7 @@ export default function Hero() {
               transition={{ duration: 0.55, delay: 0.1 }}
             >
               Custom mobile apps for aesthetic practices.
-              <span className="mt-2 block bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text text-transparent">
+              <span className="mt-2 block bg-gradient-to-r from-accent-500 via-accent-600 to-accent-500 bg-clip-text pb-2 leading-[1.15] text-transparent">
                 Built to bring patients back and grow your revenue.
               </span>
             </motion.h1>
