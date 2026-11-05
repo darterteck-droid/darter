@@ -1,85 +1,141 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import Button from "@/components/ui/Button";
-import { NAV_LINKS, DEMO_URL } from "@/lib/constants";
+import { AnimatePresence, motion, useAnimate, useScroll, useSpring, useTransform } from "motion/react";
+import { Volume2, VolumeX } from "lucide-react";
+import { useEffect } from "react";
+import BlobMark from "@/components/ui/BlobMark";
+import { setSound, useSound } from "@/lib/sfx";
+import { RANKS, formatViews, rankIndex, rankProgress, useGame } from "@/lib/views";
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+const LINKS = [
+  { label: "Slice", href: "/#slice" },
+  { label: "Film", href: "/#film" },
+  { label: "Feed", href: "/#feed" },
+  { label: "Engine", href: "/#engine" },
+  { label: "Algorithm", href: "/#maze" },
+];
+
+function RollLink({ label, href }: { label: string; href: string }) {
+  return (
+    <Link
+      href={href}
+      className="group relative block overflow-hidden rounded-full px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-mist transition-colors hover:bg-white/5 hover:text-paper"
+    >
+      <span className="block transition-transform duration-300 ease-out group-hover:-translate-y-[140%]">{label}</span>
+      <span
+        aria-hidden="true"
+        className="text-chroma absolute inset-x-0 top-1/2 block translate-y-[90%] text-center font-bold transition-transform duration-300 ease-out group-hover:-translate-y-1/2"
+      >
+        {label}
+      </span>
+    </Link>
+  );
+}
+
+// Your views, your rank, and how far to the next one. Bursts fly into this.
+function ViewsCounter() {
+  const { views, lastGain, gainId } = useGame();
+  const [scope, animate] = useAnimate();
+  const rolling = useSpring(views, { stiffness: 90, damping: 22 });
+  const full = useTransform(rolling, (v) => Math.round(v).toLocaleString());
+  const short = useTransform(rolling, (v) => formatViews(Math.round(v)));
+  const rank = RANKS[rankIndex(views)];
+  const progress = rankProgress(views);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    rolling.set(views);
+  }, [views, rolling]);
+
+  useEffect(() => {
+    const bump = () => {
+      if (scope.current) animate(scope.current, { scale: [1, 1.14, 1] }, { duration: 0.28 });
+    };
+    window.addEventListener("views-bump", bump);
+    return () => window.removeEventListener("views-bump", bump);
+  }, [animate, scope]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-white/85 backdrop-blur-md border-b border-border-subtle shadow-[0_1px_0_rgba(26,22,19,0.04)]"
-          : "bg-transparent"
-      }`}
+    <div
+      ref={scope}
+      id="views-counter"
+      className="relative flex items-center gap-2.5 rounded-full bg-white/[0.06] py-1.5 pl-3 pr-3.5"
+      title={`${views.toLocaleString()} views`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-xl font-bold text-text-primary"
-        >
-          <span className="h-2 w-2 rounded-full bg-accent-500" aria-hidden />
-          Darter
-        </Link>
-
-        {/* Desktop links */}
-        <div className="hidden items-center gap-8 md:flex">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-text-secondary transition-colors hover:text-text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Button href={DEMO_URL} size="sm">
-            Book a Call
-          </Button>
+      <span className="relative flex h-2 w-2">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ff4d4d] opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-[#ff4d4d]" />
+      </span>
+      <div className="leading-none">
+        <div className="flex items-baseline gap-1.5">
+          <motion.span className="font-display text-sm font-black tabular-nums sm:hidden">{short}</motion.span>
+          <motion.span className="hidden font-display text-sm font-black tabular-nums sm:inline">{full}</motion.span>
+          <span className="font-mono text-[10px] uppercase tracking-wider text-mist">views</span>
         </div>
+        <div className="mt-1 flex items-center gap-1.5">
+          <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-gold">{rank.title}</span>
+          <span className="relative h-[3px] w-10 overflow-hidden rounded-full bg-white/10 sm:w-14">
+            <motion.span
+              className="bg-chroma absolute inset-y-0 left-0 rounded-full"
+              animate={{ width: `${Math.max(4, progress * 100)}%` }}
+              transition={{ type: "spring", stiffness: 120, damping: 20 }}
+            />
+          </span>
+        </div>
+      </div>
+      <AnimatePresence>
+        {lastGain > 0 && (
+          <motion.span
+            key={gainId}
+            initial={{ y: 4, opacity: 0 }}
+            animate={{ y: -18, opacity: [0, 1, 1, 0] }}
+            transition={{ duration: 0.9, times: [0, 0.15, 0.7, 1] }}
+            className="pointer-events-none absolute -top-1 right-2 font-mono text-[10px] font-bold text-lime"
+          >
+            ▲ +{formatViews(lastGain)}
+          </motion.span>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
-        {/* Mobile hamburger */}
-        <button
-          className="text-text-primary md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
-      </nav>
+export default function Navbar() {
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 220, damping: 32, mass: 0.3 });
+  const sound = useSound();
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="border-t border-border-subtle bg-white/95 backdrop-blur-md md:hidden">
-          <div className="flex flex-col gap-4 px-4 py-6">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-lg text-text-secondary transition-colors hover:text-text-primary"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </Link>
+  return (
+    <header className="fixed inset-x-0 top-0 z-50">
+      <motion.div style={{ scaleX: progress }} className="bg-chroma h-[3px] origin-left" />
+      <div className="px-4">
+        <nav className="mx-auto mt-3 flex max-w-6xl items-center justify-between gap-2 rounded-full border border-line bg-ink/60 py-1.5 pl-3 pr-1.5 backdrop-blur-xl sm:mt-4">
+          <Link href="/" className="group flex items-center gap-2.5" data-cursor="Hi!">
+            <BlobMark className="h-8 w-8 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" />
+            <span className="hidden font-display text-sm font-black tracking-tight min-[400px]:inline sm:text-base">DARTER</span>
+          </Link>
+
+          <div className="hidden items-center gap-0.5 md:flex">
+            {LINKS.map((link) => (
+              <RollLink key={link.href} {...link} />
             ))}
-            <Button href={DEMO_URL} size="md" className="mt-2">
-              Book a Call
-            </Button>
           </div>
-        </div>
-      )}
+
+          <div className="flex items-center gap-1.5">
+            <ViewsCounter />
+            <button
+              type="button"
+              onClick={() => setSound(!sound)}
+              aria-label={sound ? "Turn sound off" : "Turn sound on"}
+              aria-pressed={sound}
+              data-cursor={sound ? "Mute" : "Sound"}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.06] text-mist transition-colors hover:bg-white/10 hover:text-paper"
+            >
+              {sound ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
+            </button>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

@@ -1,161 +1,151 @@
+"use client";
+
 import Link from "next/link";
-import StoreBadges from "@/components/ui/StoreBadges";
+import { motion, useMotionValue, useSpring } from "motion/react";
+import { ArrowUp } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { RANKS, formatViews, rankIndex, useViews } from "@/lib/views";
+import { formatClock, useWatchTime } from "@/lib/watch";
 
-/* ── Compliance badge SVGs ── */
+const LETTERS = ["D", "A", "R", "T", "E", "R"];
+const HOVER_COLORS = ["#ffc96b", "#ff9a52", "#ff7a8f", "#6fd6e3", "#7fe0b0", "#fff1cf"];
 
-function sealPath(
-  cx: number,
-  cy: number,
-  outerR: number,
-  innerR: number,
-  scallops: number,
-) {
-  const pts: string[] = [];
-  const total = scallops * 2;
-  for (let i = 0; i < total; i++) {
-    const a = (i / total) * Math.PI * 2 - Math.PI / 2;
-    const r = i % 2 === 0 ? outerR : innerR;
-    pts.push(`${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a)).toFixed(1)}`);
-  }
-  return `M${pts.join("L")}Z`;
-}
+// A pair of eyes peeking over the wordmark, watching the cursor.
+function PeekEyes() {
+  const ref = useRef<HTMLDivElement>(null);
+  const lx = useMotionValue(0);
+  const ly = useMotionValue(0);
+  const x = useSpring(lx, { stiffness: 200, damping: 18 });
+  const y = useSpring(ly, { stiffness: 200, damping: 18 });
 
-const SEAL = sealPath(50, 50, 47, 40, 18);
-const SHIELD =
-  "M50 4 C50 4 90 18 90 18 L90 48 C90 74 72 90 50 98 C28 90 10 74 10 48 L10 18 Z";
+  useEffect(() => {
+    const onMove = (e: PointerEvent) => {
+      const r = ref.current?.getBoundingClientRect();
+      if (!r) return;
+      const dx = e.clientX - (r.left + r.width / 2);
+      const dy = e.clientY - (r.top + r.height / 2);
+      const d = Math.hypot(dx, dy) || 1;
+      const reach = Math.min(1, d / 200);
+      lx.set((dx / d) * 6 * reach);
+      ly.set((dy / d) * 6 * reach);
+    };
+    window.addEventListener("pointermove", onMove);
+    return () => window.removeEventListener("pointermove", onMove);
+  }, [lx, ly]);
 
-function Soc2Badge({ type }: { type: "I" | "II" }) {
   return (
-    <svg
-      viewBox="0 0 100 100"
-      className="h-16 w-16 sm:h-20 sm:w-20"
-      aria-label={`AICPA SOC 2 Type ${type}`}
-    >
-      <path d={SEAL} fill="none" stroke="currentColor" strokeWidth="2" />
-      <text x="50" y="34" textAnchor="middle" fill="currentColor" fontSize="10" fontWeight="600" fontFamily="sans-serif">AICPA</text>
-      <text x="50" y="52" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="700" fontFamily="sans-serif">SOC 2</text>
-      <text x="50" y="63" textAnchor="middle" fill="currentColor" fontSize="7" fontFamily="sans-serif">★ ★ ★</text>
-      <text x="50" y="76" textAnchor="middle" fill="currentColor" fontSize="11" fontWeight="600" fontFamily="sans-serif">{`TYPE ${type}`}</text>
-    </svg>
-  );
-}
-
-function IsoBadge() {
-  return (
-    <svg viewBox="0 0 100 100" className="h-16 w-16 sm:h-20 sm:w-20" aria-label="ISO 27001">
-      <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" strokeWidth="5" />
-      <circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" strokeWidth="1.5" />
-      <text x="50" y="50" textAnchor="middle" fill="currentColor" fontSize="22" fontWeight="700" fontFamily="sans-serif" dominantBaseline="central">ISO</text>
-      <text x="50" y="70" textAnchor="middle" fill="currentColor" fontSize="12" fontWeight="600" fontFamily="sans-serif">27001</text>
-    </svg>
-  );
-}
-
-function GdprBadge() {
-  return (
-    <svg viewBox="0 0 100 100" className="h-16 w-16 sm:h-20 sm:w-20" aria-label="GDPR">
-      <path d={SHIELD} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-      <path d="M40 48 V40 C40 30 60 30 60 40 V48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      <rect x="36" y="48" width="28" height="20" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
-      <circle cx="50" cy="56" r="2.5" fill="currentColor" />
-      <rect x="48.8" y="56" width="2.4" height="5" rx="1" fill="currentColor" />
-      <text x="50" y="84" textAnchor="middle" fill="currentColor" fontSize="12" fontWeight="700" fontFamily="sans-serif">GDPR</text>
-    </svg>
-  );
-}
-
-function HipaaBadge() {
-  return (
-    <svg viewBox="0 0 100 100" className="h-16 w-16 sm:h-20 sm:w-20" aria-label="HIPAA">
-      <path d={SHIELD} fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-      <line x1="50" y1="20" x2="50" y2="62" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-      <path d="M50 24 L38 19 L43 25" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M50 24 L62 19 L57 25" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M50 28 Q42 33 50 38 Q58 43 50 48 Q42 53 50 58" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M50 28 Q58 33 50 38 Q42 43 50 48 Q58 53 50 58" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <text x="50" y="82" textAnchor="middle" fill="currentColor" fontSize="11" fontWeight="700" fontFamily="sans-serif">HIPAA</text>
-    </svg>
-  );
-}
-
-function ComplianceBadges() {
-  return (
-    <div className="rounded-2xl bg-accent-100/60 px-6 py-5">
-      <div className="flex flex-wrap items-center justify-center gap-5 text-accent-600 sm:gap-8">
-        <Soc2Badge type="I" />
-        <Soc2Badge type="II" />
-        <IsoBadge />
-        <GdprBadge />
-        <HipaaBadge />
-      </div>
+    <div ref={ref} className="flex gap-1.5" aria-hidden="true">
+      {[0, 1].map((i) => (
+        <div key={i} className="a-blink svg-anim relative flex h-9 w-9 items-center justify-center rounded-full bg-paper sm:h-12 sm:w-12">
+          <motion.div style={{ x, y }} className="h-4 w-4 rounded-full bg-ink sm:h-5 sm:w-5">
+            <span className="ml-1 mt-1 block h-1.5 w-1.5 rounded-full bg-paper" />
+          </motion.div>
+        </div>
+      ))}
     </div>
   );
 }
 
-const footerLinks = {
-  Product: [
-    { label: "Platform", href: "#features" },
-    { label: "Engagement", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
-  ],
-  Legal: [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
-  ],
-};
+// End credits. The engine did everything, and you're the star.
+function Credits() {
+  const views = useViews();
+  const seconds = useWatchTime();
+  const rows: [string, string][] = [
+    ["Written by", "The Engine"],
+    ["Animated by", "The Engine"],
+    ["Posted by", "The Engine, daily"],
+    ["Starring", `You, as ${RANKS[rankIndex(views)].title}`],
+    ["Watch time", formatClock(seconds)],
+    ["Views earned", formatViews(views)],
+  ];
+  return (
+    <dl className="mx-auto mt-14 grid max-w-xl gap-3 sm:mt-20">
+      {rows.map(([role, name], i) => (
+        <motion.div
+          key={role}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-5% 0px" }}
+          transition={{ duration: 0.6, delay: i * 0.12, ease: [0.2, 0.8, 0.2, 1] }}
+          className="grid grid-cols-2 items-baseline gap-5"
+        >
+          <dt className="text-right font-mono text-[10px] uppercase tracking-[0.25em] text-dim sm:text-xs">{role}</dt>
+          <dd className="font-serif text-lg italic tabular-nums text-paper sm:text-2xl">{name}</dd>
+        </motion.div>
+      ))}
+    </dl>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          {/* Brand */}
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-xl font-bold text-text-primary"
-          >
-            <span className="h-2 w-2 rounded-full bg-accent-500" aria-hidden />
-            Darter
-          </Link>
-          <p className="mt-3 max-w-md text-sm text-text-secondary">
-            Bespoke mobile apps for the world&apos;s best-run aesthetic
-            practices.
+    <footer id="credits" className="relative overflow-hidden border-t border-line px-4 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-28">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[70%] bg-[radial-gradient(ellipse_at_50%_100%,rgba(255,170,90,0.22),transparent_70%)]" />
+      <div className="relative mx-auto max-w-6xl">
+        <div className="text-center">
+          <div className="font-mono text-[11px] uppercase tracking-[0.35em] text-gold">The end</div>
+          <p className="mt-4 font-serif text-5xl italic leading-[1.02] tracking-[-0.02em] sm:text-7xl">
+            Thanks for watching.
           </p>
+          <p className="mt-3 text-lg text-mist sm:text-xl">You&apos;re hooked. We know.</p>
+        </div>
 
-          {/* Store badges row */}
-          <div className="mt-8">
-            <StoreBadges variant="footer" />
+        <Credits />
+
+        <div className="mt-12 flex justify-center">
+          <motion.button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            whileHover={{ y: -4 }}
+            whileTap={{ scale: 0.94 }}
+            data-cursor="Again"
+            className="group flex items-center gap-2 rounded-full border border-line bg-white/5 px-5 py-3 font-mono text-xs uppercase tracking-widest text-paper"
+          >
+            Watch it again
+            <ArrowUp className="h-4 w-4 transition-transform group-hover:-translate-y-1" />
+          </motion.button>
+        </div>
+
+        <div className="relative mt-16 sm:mt-24">
+          <div className="absolute -top-7 left-[41%] sm:-top-10">
+            <PeekEyes />
           </div>
-
-          {/* Link columns + compliance badges */}
-          <div className="mt-12 flex flex-wrap items-start justify-center gap-12 sm:gap-16">
-            <ComplianceBadges />
-            {Object.entries(footerLinks).map(([heading, links]) => (
-              <div key={heading}>
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-text-muted">
-                  {heading}
-                </h4>
-                <ul className="mt-4 space-y-3">
-                  {links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-text-secondary transition-colors hover:text-text-primary"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div
+            className="flex select-none justify-between font-display text-[17.5vw] font-black leading-[0.8] tracking-[-0.05em] lg:text-[13rem]"
+            aria-label="DARTER"
+          >
+            {LETTERS.map((letter, i) => (
+              <motion.span
+                key={i}
+                aria-hidden="true"
+                className="inline-block"
+                initial={{ y: "60%", opacity: 0 }}
+                whileInView={{ y: "0%", opacity: 1 }}
+                viewport={{ once: true, margin: "-10% 0px" }}
+                transition={{ type: "spring", stiffness: 300, damping: 16, delay: i * 0.06 }}
+              >
+                <motion.span
+                  className="inline-block"
+                  whileHover={{ y: "-14%", rotate: i % 2 ? 7 : -7, color: HOVER_COLORS[i] }}
+                  transition={{ type: "spring", stiffness: 500, damping: 12 }}
+                >
+                  {letter}
+                </motion.span>
+              </motion.span>
             ))}
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border pt-8">
-          <p className="text-center text-sm text-text-muted">
-            &copy; {new Date().getFullYear()} Darter. All rights reserved.
-          </p>
+        <div className="mt-8 flex flex-col gap-3 border-t border-line pt-6 font-mono text-xs uppercase tracking-widest text-dim sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} DARTER L.L.C. We control the algorithm.</span>
+          <div className="flex gap-6">
+            <Link href="/privacy-policy" className="transition-colors hover:text-paper">
+              Privacy
+            </Link>
+            <Link href="/terms-of-service" className="transition-colors hover:text-paper">
+              Terms
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

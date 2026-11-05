@@ -1,27 +1,33 @@
+import Intro from "@/components/fx/Intro";
 import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/sections/Hero";
-import TrustStrip from "@/components/sections/TrustStrip";
-import Features from "@/components/sections/Features";
-import AppValueCalculator from "@/components/sections/AppValueCalculator";
-import Founders from "@/components/sections/Founders";
-import FAQ from "@/components/sections/FAQ";
-import Pricing from "@/components/sections/Pricing";
-import CtaSection from "@/components/sections/CtaSection";
+import FilmHero from "@/components/film/FilmHero";
+import Marquee from "@/components/sections/Marquee";
+import FruitSlice from "@/components/slice/FruitSlice";
+import Anatomy from "@/components/film/Anatomy";
+import Feed from "@/components/feed/Feed";
+import Engine from "@/components/sections/Engine";
+import MazeGame from "@/components/maze/MazeGame";
+import Statement from "@/components/sections/Statement";
 import Footer from "@/components/layout/Footer";
+import GameHUD from "@/components/fx/GameHUD";
+import Subtitles from "@/components/fx/Subtitles";
 
 export default function Home() {
   return (
     <main>
+      <Intro />
       <Navbar />
-      <Hero />
-      <TrustStrip />
-      <Features />
-      <AppValueCalculator />
-      <Founders />
-      <FAQ />
-      <Pricing />
-      <CtaSection />
+      <FilmHero />
+      <Marquee />
+      <FruitSlice />
+      <Anatomy />
+      <Feed />
+      <Engine />
+      <MazeGame />
+      <Statement />
       <Footer />
+      <Subtitles />
+      <GameHUD />
     </main>
   );
 }
