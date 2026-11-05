@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion, useMotionValue, useSpring } from "motion/react";
-import { ArrowUp } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { ArrowUp, ArrowUpRight, Check, Copy } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { CONTACT_EMAIL } from "@/lib/content";
 import { RANKS, formatViews, rankIndex, useViews } from "@/lib/views";
 import { formatClock, useWatchTime } from "@/lib/watch";
 
@@ -77,6 +78,57 @@ function Credits() {
   );
 }
 
+// The one way in: an email, plus a copy button for people without a mail app.
+function WorkWithUs() {
+  const [copied, setCopied] = useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {}
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10% 0px" }}
+      transition={{ type: "spring", stiffness: 120, damping: 20 }}
+      className="relative mt-16 overflow-hidden rounded-[32px] border border-line bg-gradient-to-br from-gold/[0.09] via-white/[0.02] to-transparent px-5 py-10 text-center sm:mt-24 sm:px-10 sm:py-14"
+    >
+      <span
+        aria-hidden="true"
+        className="bokeh -left-10 -top-12 h-44 w-44"
+        style={{ "--o": 0.3 } as React.CSSProperties}
+      />
+      <div className="relative font-mono text-[11px] uppercase tracking-[0.35em] text-gold">Work with us</div>
+      <p className="relative mx-auto mt-3 max-w-md text-balance text-base text-mist sm:text-lg">
+        Brands and faceless accounts. Tell us what you want people to stop scrolling for.
+      </p>
+      <a
+        href={`mailto:${CONTACT_EMAIL}`}
+        data-cursor="Email"
+        className="group relative mt-5 inline-flex items-center gap-2 font-serif text-[8.2vw] font-semibold italic leading-tight sm:gap-3 sm:text-5xl lg:text-6xl"
+      >
+        <span className="text-chroma pb-[0.12em] pr-[0.08em]">{CONTACT_EMAIL}</span>
+        <ArrowUpRight className="h-6 w-6 shrink-0 text-gold transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 sm:h-10 sm:w-10" />
+      </a>
+      <div className="relative mt-4">
+        <button
+          type="button"
+          onClick={copy}
+          data-cursor="Copy"
+          className="inline-flex items-center gap-2 rounded-full border border-line bg-white/5 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mist transition-colors hover:text-paper"
+        >
+          {copied ? <Check className="h-3.5 w-3.5 text-gold" /> : <Copy className="h-3.5 w-3.5" />}
+          {copied ? "Copied" : "Copy email"}
+        </button>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer id="credits" className="relative overflow-hidden border-t border-line px-4 pb-16 pt-20 sm:px-8 sm:pb-20 sm:pt-28">
@@ -91,6 +143,8 @@ export default function Footer() {
         </div>
 
         <Credits />
+
+        <WorkWithUs />
 
         <div className="mt-12 flex justify-center">
           <motion.button

@@ -40,7 +40,7 @@ export default function Feed() {
     }
   });
 
-  const item = FEED[index];
+  const item = FEED[Math.min(index, FEED.length - 1)];
 
   const like = (e: React.MouseEvent<HTMLDivElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
@@ -62,7 +62,7 @@ export default function Feed() {
       id="feed"
       ref={section}
       className="relative"
-      style={{ height: `calc(100svh + ${FEED.length * 62}svh)` }}
+      style={{ height: `calc(100svh + ${FEED.length * 80}svh)` }}
     >
       <div className="sticky top-0 h-[100svh] overflow-hidden">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_60%,rgba(255,170,90,0.16),transparent_55%)]" />

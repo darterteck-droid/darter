@@ -21,6 +21,8 @@ export const SHORTS: Short[] = [
   { ep: "06", title: "Outrun", tags: ["maze", "thriller"], scene: "maze", tilt: 1 },
 ];
 
+export const CONTACT_EMAIL = "darterteck@gmail.com";
+
 export const FILM = {
   src: "/films/glow-up.mp4",
   poster: "/films/glow-up-poster.jpg",
@@ -122,11 +124,15 @@ export const FEED: FeedItem[] = [
     poster: REAL_THING.poster,
     vertical: true,
   },
-  { id: "race", title: "Last to First", caption: "Dead last on lap one. You know how this ends. Watch anyway.", tags: ["come-up", "racing"], scene: "race" },
-  { id: "hustle", title: "Penny to Penthouse", caption: "Five bucks and a folding table. Part 1.", tags: ["come-up", "hustle"], scene: "hustle" },
-  { id: "patrol", title: "Night Patrol", caption: "The city sleeps. He doesn't.", tags: ["hero", "action"], scene: "patrol" },
-  { id: "hut", title: "The Hut", caption: "Sticks, mud and one very patient builder.", tags: ["satisfying", "build"], scene: "hut" },
-  { id: "maze", title: "Outrun", caption: "The walls are closing. Don't blink.", tags: ["thriller", "maze"], scene: "maze" },
+  {
+    id: "the-wallet",
+    title: "The Wallet",
+    caption: "He could've kept it. Watch what happens when he doesn't.",
+    tags: ["hero", "kindness"],
+    video: "/films/the-wallet.mp4",
+    poster: "/films/the-wallet-poster.jpg",
+    vertical: true,
+  },
 ];
 
 export const MARQUEE_TOP = ["Glow-ups", "Come-ups", "Hero stories", "Fruit cuts", "Jungle builds", "Posted daily"];
